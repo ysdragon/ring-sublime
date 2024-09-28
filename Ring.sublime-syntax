@@ -1,0 +1,182 @@
+%YAML 1.2
+---
+#
+#   Author: ysdragon (https://github.com/ysdragon)
+#
+
+name: Ring
+scope: source.ring
+
+file_extensions:
+  - ring
+  - rh
+  - rform
+
+variables:
+  keywords: '\b(?i)(again|and|but|bye|call|case|catch|class|do|done|else|elseif|end|exit|for|foreach|from|get|give|if|import|in|load|loop|new|next|not|off|ok|on|or|other|package|private|return|step|switch|to|try|while|changeringkeyword|changeringoperator|loadsyntax|endfunc|endclass|endpackage|endif|endfor|endwhile|endswitch|endtry|endfunction|break|continue|default|nl)\b'
+  operators: '(\+|~|-|\*|/|%|&|(\|)|^|!|<|>|=|\.)'
+  types: '\b(char|unsigned|signed|int|short|long|float|double|void|byte|boolean|string|list|number|object|public|static|abstract|protected|override|@override)\b'
+
+contexts:
+  main:
+    # Comments
+    - match: '#'
+      push: line_comment
+    - match: '//'
+      push: line_comment
+    - match: '/\*'
+      push: block_comment
+
+    # Keywords
+    - match: '{{keywords}}'
+      scope: keyword.control.ring
+
+    # Types using Ring Type Hints Library
+    - match: '{{types}}'
+      scope: keyword.control.ring
+
+    # Function definitions
+    - match: '\b(?i)(func|def)\s+([a-zA-Z_]\w*)'
+      captures:
+        1: storage.type.function.ring
+        2: entity.name.function.ring
+
+    # Treat all that end with parentheses () as functions, except for print, see, and put
+    - match: '\b(?!print|see|put\b)([a-zA-Z_]\w*)\s*\('
+      captures:
+        1: support.function.ring
+        
+    # Integer numbers
+    - match: '\b\d+\b'
+      scope: constant.numeric.integer.ring
+
+    # Special values
+    - match: '\b(?i)(true|false|null)\b'
+      scope: constant.language.ring
+
+    # Strings
+    # Double quoted strings
+    - match: '"'
+      scope: punctuation.definition.string.begin.ring
+      push:
+        - meta_scope: meta.string.ring string.quoted.double.ring
+        - match: '"'
+          scope: punctuation.definition.string.end.ring
+          pop: true
+        - include: interpolated_expression
+
+    # Single quoted strings
+    - match: "'"
+      scope: punctuation.definition.string.begin.ring
+      push:
+        - meta_scope: meta.string.ring string.quoted.single.ring
+        - match: "'"
+          scope: punctuation.definition.string.end.ring
+          pop: true
+        - match: \\'|\\\\
+          scope: constant.character.escape.ring
+        - include: interpolated_expression
+    # Constant string
+    - match: "`"
+      scope: punctuation.definition.string.begin.ring
+      push:
+        - meta_scope: meta.string.ring string.interpolated.ring
+        - match: "`"
+          scope: punctuation.definition.string.end.ring
+          pop: true
+        - include: interpolated_expression
+
+    # Variables in assignment
+    - match: '\b([a-zA-Z_]\w*)\s*(=)'
+      captures:
+        1: variable.other.ring
+        2: keyword.operator.assignment.ring
+
+    # Operators
+    - match: '{{operators}}'
+      scope: keyword.operator.ring
+
+    # Logical Operators
+    - match: '\b(and|or)\b'
+      scope: keyword.operator.logical.ring
+
+    # Braces
+    - match: '[{}]'
+      scope: punctuation.section.braces.ring
+
+    # Lists
+    - match: '\['
+      scope: punctuation.definition.list.begin.ring
+      push: inside_list
+    - match: '\]'
+      scope: punctuation.definition.list.end.ring
+
+    # Print operators
+    - match: '\b(?i)(see|put|print)\b|\?'
+      scope: keyword.operator.print.ring
+
+    # Classes
+    - match: '\b(class)\s+([A-Za-z_]\w*)'
+      captures:
+        1: keyword.control.class.ring
+        2: entity.name.type.class.ring
+    # Init method
+    - match: '\b(func|def)\s+(init)\b'
+      captures:
+        1: keyword.control.ring
+        2: entity.name.function.constructor.ring
+    # Class methods
+    - match: '\b(func|def)\s+([A-Za-z_]\w*)'
+      captures:
+        1: keyword.control.ring
+        2: entity.name.function.ring
+    # Class instantiation
+    - match: '\b(new)\s+([A-Za-z_]\w*)'
+      captures:
+        1: keyword.operator.new.ring
+        2: support.class.ring
+    # Self keyword
+    - match: '\bself\b'
+      scope: variable.language.self.ring
+         
+
+  # Line comments
+  line_comment:
+    - meta_scope: comment.line.ring
+    - match: $
+      pop: true
+
+  # Block comments
+  block_comment:
+    - meta_scope: comment.block.ring
+    - match: '\*/'
+      pop: true
+    - match: '.'
+      scope: comment.block.ring
+
+  # These go inside double/single quoted or constant strings using print("like #{this}")
+  interpolated_expression:
+    - match: '#\{'
+      scope: punctuation.section.interpolation.begin.ring
+      push:
+        - meta_scope: meta.interpolation.ring
+        - match: '\}'
+          scope: punctuation.section.interpolation.end.ring
+          pop: true
+        - match: '\b[A-Za-z_]\w*\b'
+          scope: variable.other.interpolated.ring
+        - include: main
+
+  # Handle inside list
+  inside_list:
+    - meta_scope: meta.structure.list.ring
+    - match: '\]'
+      scope: punctuation.definition.list.end.ring
+      pop: true
+    - include: main
+    # Colon
+    - match: ':'
+      scope: punctuation.accessor.double-colon.ring
+    # Comma
+    - match: ','
+      scope: punctuation.separator.list.ring
