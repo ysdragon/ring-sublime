@@ -76,7 +76,7 @@ contexts:
         - match: \\'|\\\\
           scope: constant.character.escape.ring
         - include: interpolated_expression
-    # Constant string
+    # Constant strings
     - match: "`"
       scope: punctuation.definition.string.begin.ring
       push:
@@ -91,6 +91,9 @@ contexts:
       captures:
         1: variable.other.ring
         2: keyword.operator.assignment.ring
+    # Ring colon literals
+    - match: '\:([a-zA-Z_]\w*)\b'
+      scope: constant.other.symbol.ring
 
     # Operators
     - match: '{{operators}}'
@@ -174,9 +177,6 @@ contexts:
       scope: punctuation.definition.list.end.ring
       pop: true
     - include: main
-    # Colon
-    - match: ':'
-      scope: punctuation.accessor.double-colon.ring
     # Comma
     - match: ','
       scope: punctuation.separator.list.ring
