@@ -13,9 +13,10 @@ file_extensions:
   - rform
 
 variables:
-  keywords: '\b(?i)(again|and|but|bye|call|case|catch|class|do|done|else|elseif|end|exit|for|foreach|from|get|give|if|import|in|load|loop|new|next|not|off|ok|on|or|other|package|private|return|step|switch|to|try|while|changeringkeyword|changeringoperator|loadsyntax|endfunc|endclass|endpackage|endif|endfor|endwhile|endswitch|endtry|endfunction|break|continue|default|nl)\b'
+  keywords: '\b(?i)(call|class|from|get|give|import|load|new|package|private|changeringkeyword|changeringoperator|loadsyntax|endclass|endpackage)\b'
+  controls: '\b(?i)(if|but|else|elseif|ok|for|foreach|to|next|catch|step|endfor|while|other|end|do|endwhile|endswitch|endtry|try|break|bye|continue|default|endfunc|endfunction|return|switch|case|on|off|do|again|exit|loop|done|in)\b'
   operators: '(\+|~|-|\*|/|%|&|(\|)|^|!|<|>|=|\.)'
-  types: '\b(char|unsigned|signed|int|short|long|float|double|void|byte|boolean|string|list|number|object|public|static|abstract|protected|override|@override)\b'
+  types: '\b(?i)(char|unsigned|signed|int|short|long|float|double|void|byte|boolean|string|list|number|object|public|static|abstract|protected|override|@override)\b'
 
 contexts:
   main:
@@ -31,9 +32,17 @@ contexts:
     - match: '{{keywords}}'
       scope: keyword.control.ring
 
+    # Controls
+    - match: '{{controls}}'
+      scope: keyword.control.conditional.ring
+
+    # Built-in new-line and print functions
+    - match: '\b(?i)(nl|see|put|print)\b|\?'
+      scope: support.function.builtin.ring
+
     # Types using Ring Type Hints Library
     - match: '{{types}}'
-      scope: keyword.control.ring
+      scope: storage.type.ring
 
     # Function definitions
     - match: '\b(?i)(func|def)\s+([a-zA-Z_]\w*)'
@@ -46,9 +55,13 @@ contexts:
       captures:
         1: support.function.ring
         
-    # Integer numbers
-    - match: '\b\d+\b'
-      scope: constant.numeric.integer.ring
+    # Numbers
+    - match: (?:(?:[-]?)(?:[0-9e]*)(?:[.]){1}(?:[0-9]+))
+      scope: constant.numeric.float.decimal.ring
+    - match: \b(?:0[xX])(?:[0-9a-fA-F]+)
+      scope: constant.numeric.hex.ring
+    - match: \b(?:[-]?)(?:[0-9]+)
+      scope: constant.numeric.integer.decimal.ring
 
     # Special values
     - match: '\b(?i)(true|false|null)\b'
@@ -100,7 +113,7 @@ contexts:
       scope: keyword.operator.ring
 
     # Logical Operators
-    - match: '\b(and|or)\b'
+    - match: '\b(and|or|not)\b'
       scope: keyword.operator.logical.ring
 
     # Braces
@@ -113,10 +126,6 @@ contexts:
       push: inside_list
     - match: '\]'
       scope: punctuation.definition.list.end.ring
-
-    # Print operators
-    - match: '\b(?i)(see|put|print)\b|\?'
-      scope: keyword.operator.print.ring
 
     # Classes
     - match: '\b(class)\s+([A-Za-z_]\w*)'
