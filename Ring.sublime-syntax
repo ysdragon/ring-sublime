@@ -13,7 +13,7 @@ file_extensions:
   - rform
 
 variables:
-  keywords: '\b(?i)(call|class|from|get|give|import|load|new|package|private|changeringkeyword|changeringoperator|loadsyntax|endclass|endpackage)\b'
+  keywords: '\b(?i)(enablehashcomments|disablehashcomments|call|class|from|get|give|import|load|new|package|private|changeringkeyword|changeringoperator|loadsyntax|endclass|endpackage)\b'
   controls: '\b(?i)(if|but|else|elseif|ok|for|foreach|to|next|catch|step|endfor|while|other|end|do|endwhile|endswitch|endtry|try|break|bye|continue|default|endfunc|endfunction|return|switch|case|on|off|do|again|exit|loop|done|in)\b'
   operators: '(\+|~|-|\*|/|%|&|(\|)|^|!|<|>|=|\.)'
   types: '\b(?i)(char|unsigned|signed|int|short|long|float|double|void|byte|boolean|string|list|number|object|public|static|abstract|protected|override|@override)\b'
