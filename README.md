@@ -4,7 +4,8 @@ This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Subl
 
 ## Features
 
-- Support for keywords, comments, strings, and more
+- Support for keywords, comments, strings, etc.
+- Support for keyword and function completions.
 
 ## Installation
 
