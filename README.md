@@ -9,6 +9,14 @@ This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Subl
 
 ## Installation
 
+### Using Package Control
+
+1. Open the Command Palette in Sublime Text by pressing `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).
+2. Type `Package Control: Install Package` and select from the dropdown list.
+3. Type `Ring` in the search box and select the `Ring` package from the list.
+
+### Manual Installation
+
 1. Download or clone this repository.
 ```bash
 git clone https://github.com/ysdragon/ring-sublime
