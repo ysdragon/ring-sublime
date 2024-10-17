@@ -1,321 +1,1685 @@
 {
     "scope": "source.ring - string.quoted",
     "completions": [
-        { "trigger": "changeringKeyword", "contents": "changeringKeyword()", "kind": "function", "annotation": "Modify Ring language keywords" },
-        { "trigger": "changeringoperator", "contents": "changeringoperator()", "kind": "function", "annotation": "Modify Ring language operators" },
-        { "trigger": "enablehashcomments", "contents": "enablehashcomments()", "kind": "function", "annotation": "Enable '#' for single-line comments" },
-        { "trigger": "disablehashcomments", "contents": "disablehashcomments()", "kind": "function", "annotation": "Disable '#' for single-line comments" },
-        { "trigger": "loadsyntax", "contents": "loadsyntax()", "kind": "function", "annotation": "Load custom syntax rules from a file" },
-        { "trigger": "again", "contents": "again", "kind": "keyword", "annotation": "Restart a loop iteration" },
-        { "trigger": "and", "contents": "and", "kind": "operator", "annotation": "Logical AND operator" },
-        { "trigger": "but", "contents": "but", "kind": "keyword", "annotation": "Alternative to 'elseif'" },
-        { "trigger": "bye", "contents": "bye", "kind": "keyword", "annotation": "Exit the program" },
-        { "trigger": "call", "contents": "call", "kind": "keyword", "annotation": "Invoke a function or method" },
-        { "trigger": "case", "contents": "case", "kind": "keyword", "annotation": "Define a case in a switch statement" },
-        { "trigger": "catch", "contents": "catch", "kind": "keyword", "annotation": "Handle exceptions in a try-catch block" },
-        { "trigger": "class", "contents": "class", "kind": "keyword", "annotation": "Define a new class" },
-        { "trigger": "def", "contents": "def", "kind": "keyword", "annotation": "Define a new function" },
-        { "trigger": "do", "contents": "do", "kind": "keyword", "annotation": "Start a do-while loop" },
-        { "trigger": "done", "contents": "done", "kind": "keyword", "annotation": "End a block in some control structures" },
-        { "trigger": "else", "contents": "else", "kind": "keyword", "annotation": "Alternative execution path in if statement" },
-        { "trigger": "elseif", "contents": "elseif", "kind": "keyword", "annotation": "A condition in if statement" },
-        { "trigger": "end", "contents": "end", "kind": "keyword", "annotation": "End a block or control structure" },
-        { "trigger": "exit", "contents": "exit", "kind": "keyword", "annotation": "Terminate the program execution" },
-        { "trigger": "for", "contents": "for", "kind": "keyword", "annotation": "Start a for loop" },
-        { "trigger": "foreach", "contents": "foreach", "kind": "keyword", "annotation": "Iterate over elements in a list" },
-        { "trigger": "from", "contents": "from", "kind": "keyword", "annotation": "Specify source in import statements" },
-        { "trigger": "func", "contents": "func", "kind": "keyword", "annotation": "Define a new function" },
-        { "trigger": "get", "contents": "get", "kind": "keyword", "annotation": "Retrieve a value or input" },
-        { "trigger": "give", "contents": "give", "kind": "keyword", "annotation": "Retrieve a value or input" },
-        { "trigger": "if", "contents": "if", "kind": "keyword", "annotation": "Start a conditional statement" },
-        { "trigger": "import", "contents": "import", "kind": "keyword", "annotation": "Include external packages" },
-        { "trigger": "in", "contents": "in", "kind": "keyword", "annotation": "Check membership in a collection" },
-        { "trigger": "load", "contents": "load", "kind": "keyword", "annotation": "Load an external ring file" },
-        { "trigger": "loop", "contents": "loop", "kind": "keyword", "annotation": "Jump to the next iteration in the loop" },
-        { "trigger": "new", "contents": "new", "kind": "keyword", "annotation": "Create a new instance of a class" },
-        { "trigger": "next", "contents": "next", "kind": "keyword", "annotation": "Skip to the next iteration in a loop" },
-        { "trigger": "not", "contents": "not", "kind": "operator", "annotation": "Logical NOT operator" },
-        { "trigger": "off", "contents": "off", "kind": "keyword", "annotation": "End a switch statement block" },
-        { "trigger": "ok", "contents": "ok", "kind": "keyword", "annotation": "End an if statement block" },
-        { "trigger": "on", "contents": "on", "kind": "keyword", "annotation": "Define a case in a switch statement" },
-        { "trigger": "or", "contents": "or", "kind": "operator", "annotation": "Logical OR operator" },
-        { "trigger": "other", "contents": "other", "kind": "keyword", "annotation": "Default case in switch statement" },
-        { "trigger": "package", "contents": "package", "kind": "keyword", "annotation": "Define a new package" },
-        { "trigger": "private", "contents": "private", "kind": "keyword", "annotation": "Declare a private member in a class" },
-        { "trigger": "put", "contents": "put", "kind": "function", "annotation": "Display output to the console" },
-        { "trigger": "return", "contents": "return", "kind": "keyword", "annotation": "Exit a function and optionally return a value" },
-        { "trigger": "see", "contents": "see", "kind": "function", "annotation": "Display output to the console" },
-        { "trigger": "step", "contents": "step", "kind": "keyword", "annotation": "Specify increment in for loop" },
-        { "trigger": "switch", "contents": "switch", "kind": "keyword", "annotation": "Start a switch statement" },
-        { "trigger": "to", "contents": "to", "kind": "keyword", "annotation": "Specify range in for loop" },
-        { "trigger": "try", "contents": "try", "kind": "keyword", "annotation": "Start a try-catch block" },
-        { "trigger": "while", "contents": "while", "kind": "keyword", "annotation": "Start a while loop" },
-        { "trigger": "endfunc", "contents": "endfunc", "kind": "keyword", "annotation": "End a function definition" },
-        { "trigger": "endclass", "contents": "endclass", "kind": "keyword", "annotation": "End a class definition" },
-        { "trigger": "endpackage", "contents": "endpackage", "kind": "keyword", "annotation": "End a package definition" },
-        { "trigger": "endif", "contents": "endif", "kind": "keyword", "annotation": "End an if statement block" },
-        { "trigger": "endfor", "contents": "endfor", "kind": "keyword", "annotation": "End a for loop block" },
-        { "trigger": "endwhile", "contents": "endwhile", "kind": "keyword", "annotation": "End a while loop block" },
-        { "trigger": "endswitch", "contents": "endswitch", "kind": "keyword", "annotation": "End a switch statement block" },
-        { "trigger": "endtry", "contents": "endtry", "kind": "keyword", "annotation": "End a try-catch block" },
-        { "trigger": "function", "contents": "function", "kind": "keyword", "annotation": "Define a new function" },
-        { "trigger": "endfunction", "contents": "endfunction", "kind": "keyword", "annotation": "End a function definition" },
-        { "trigger": "break", "contents": "break", "kind": "keyword", "annotation": "Exit from a loop or switch statement" },
-        { "trigger": "continue", "contents": "continue", "kind": "keyword", "annotation": "Skip the rest of the current loop iteration" },
-        { "trigger": "acos", "contents": "acos()", "kind": "function", "annotation": "The principal value of the arc cosine" },
-        { "trigger": "add", "contents": "add()", "kind": "function", "annotation": "Add item to list" },
-        { "trigger": "addattribute", "contents": "addattribute()", "kind": "function", "annotation": "Add attribute to object" },
-        { "trigger": "adddays", "contents": "adddays()", "kind": "function", "annotation": "Date from cDate and after nDays" },
-        { "trigger": "addmethod", "contents": "addmethod()", "kind": "function", "annotation": "Add method to object" },
-        { "trigger": "ascii", "contents": "ascii()", "kind": "function", "annotation": "ASCII Code" },
-        { "trigger": "asin", "contents": "asin()", "kind": "function", "annotation": "The principal value of the arc sine" },
-        { "trigger": "assert", "contents": "assert()", "kind": "function", "annotation": "Assert condition" },
-        { "trigger": "atan", "contents": "atan()", "kind": "function", "annotation": "The principal value of the arc tangent" },
-        { "trigger": "atan2", "contents": "atan2()", "kind": "function", "annotation": "The principal arc tangent of y/x" },
-        { "trigger": "attributes", "contents": "attributes()", "kind": "function", "annotation": "Returns a list contains the object attributes" },
-        { "trigger": "binarysearch", "contents": "binarysearch()", "kind": "function", "annotation": "Search in list" },
-        { "trigger": "bytes2double", "contents": "bytes2double()", "kind": "function", "annotation": "Convert bytes to double" },
-        { "trigger": "bytes2float", "contents": "bytes2float()", "kind": "function", "annotation": "Convert bytes to float" },
-        { "trigger": "bytes2int", "contents": "bytes2int()", "kind": "function", "annotation": "Convert bytes to int" },
-        { "trigger": "callgarbagecollector", "contents": "callgarbagecollector()", "kind": "function", "annotation": "Call garbage collector" },
-        { "trigger": "callgc", "contents": "callgc()", "kind": "function", "annotation": "Call garbage collector" },
-        { "trigger": "ceil", "contents": "ceil()", "kind": "function", "annotation": "The smallest integer value" },
-        { "trigger": "cfunctions", "contents": "cfunctions()", "kind": "function", "annotation": "A list contains functions names" },
-        { "trigger": "char", "contents": "char()", "kind": "function", "annotation": "Convert ASCII Code to character" },
-        { "trigger": "chdir", "contents": "chdir()", "kind": "function", "annotation": "Change the current directory" },
-        { "trigger": "checkoverflow", "contents": "checkoverflow()", "kind": "function", "annotation": "Check overflow" },
-        { "trigger": "classes", "contents": "classes()", "kind": "function", "annotation": "A list contains classes names" },
-        { "trigger": "classname", "contents": "classname()", "kind": "function", "annotation": "Returns the object class name" },
-        { "trigger": "clearerr", "contents": "clearerr()", "kind": "function", "annotation": "Clear error indicator for file" },
-        { "trigger": "clock", "contents": "clock()", "kind": "function", "annotation": "The number of clock ticks from program start" },
-        { "trigger": "clockspersecond", "contents": "clockspersecond()", "kind": "function", "annotation": "Number of clocks in one second" },
-        { "trigger": "closelib", "contents": "closelib()", "kind": "function", "annotation": "Close dynamic library" },
-        { "trigger": "copy", "contents": "copy()", "kind": "function", "annotation": "String replicated nCount times" },
-        { "trigger": "cos", "contents": "cos()", "kind": "function", "annotation": "The cosine of an angle" },
-        { "trigger": "cosh", "contents": "cosh()", "kind": "function", "annotation": "The hyperbolic cosine" },
-        { "trigger": "currentdir", "contents": "currentdir()", "kind": "function", "annotation": "String contains the path of the current directory" },
-        { "trigger": "date", "contents": "date()", "kind": "function", "annotation": "String represent the date \"dd/mm/yyyy\"" },
-        { "trigger": "dec", "contents": "dec()", "kind": "function", "annotation": "Convert hexadecimal to decimal" },
-        { "trigger": "decimals", "contents": "decimals()", "kind": "function", "annotation": "Determine the decimals digits after the point" },
-        { "trigger": "del", "contents": "del()", "kind": "function", "annotation": "Delete item from list" },
-        { "trigger": "diffdays", "contents": "diffdays()", "kind": "function", "annotation": "Number of days (Date1 - Date2)" },
-        { "trigger": "dir", "contents": "dir()", "kind": "function", "annotation": "List contains files & sub folders" },
-        { "trigger": "direxists", "contents": "direxists()", "kind": "function", "annotation": "Check if the directory exists" },
-        { "trigger": "double2bytes", "contents": "double2bytes()", "kind": "function", "annotation": "Convert double to bytes" },
-        { "trigger": "eval", "contents": "eval()", "kind": "function", "annotation": "Evaluate code" },
-        { "trigger": "exefilename", "contents": "exefilename()", "kind": "function", "annotation": "String contains the Ring executable file name" },
-        { "trigger": "exefolder", "contents": "exefolder()", "kind": "function", "annotation": "String contains the Ring executable path" },
-        { "trigger": "exp", "contents": "exp()", "kind": "function", "annotation": "The value of e raised to the xth power" },
-        { "trigger": "fabs", "contents": "fabs()", "kind": "function", "annotation": "The absolute value" },
-        { "trigger": "fclose", "contents": "fclose()", "kind": "function", "annotation": "Close file stream" },
-        { "trigger": "feof", "contents": "feof()", "kind": "function", "annotation": "End-Of-File (EOF) indicator" },
-        { "trigger": "ferror", "contents": "ferror()", "kind": "function", "annotation": "Test the error indicator" },
-        { "trigger": "fexists", "contents": "fexists()", "kind": "function", "annotation": "Check if the file exists" },
-        { "trigger": "fflush", "contents": "fflush()", "kind": "function", "annotation": "Flush file buffer" },
-        { "trigger": "fgetc", "contents": "fgetc()", "kind": "function", "annotation": "Get the next character" },
-        { "trigger": "fgetpos", "contents": "fgetpos()", "kind": "function", "annotation": "Handle to the current file position" },
-        { "trigger": "fgets", "contents": "fgets()", "kind": "function", "annotation": "Read new line from the stream" },
-        { "trigger": "filename", "contents": "filename()", "kind": "function", "annotation": "String contains the file name" },
-        { "trigger": "find", "contents": "find()", "kind": "function", "annotation": "Find item in list" },
-        { "trigger": "float2bytes", "contents": "float2bytes()", "kind": "function", "annotation": "Convert float to bytes" },
-        { "trigger": "floor", "contents": "floor()", "kind": "function", "annotation": "The largest integer value less than or equal to x" },
-        { "trigger": "fopen", "contents": "fopen()", "kind": "function", "annotation": "Open file" },
-        { "trigger": "fputc", "contents": "fputc()", "kind": "function", "annotation": "Write character to file" },
-        { "trigger": "fputs", "contents": "fputs()", "kind": "function", "annotation": "Write string to file" },
-        { "trigger": "fread", "contents": "fread()", "kind": "function", "annotation": "Read from file" },
-        { "trigger": "freopen", "contents": "freopen()", "kind": "function", "annotation": "Reopen file" },
-        { "trigger": "fseek", "contents": "fseek()", "kind": "function", "annotation": "Set the file position" },
-        { "trigger": "fsetpos", "contents": "fsetpos()", "kind": "function", "annotation": "Set the file position" },
-        { "trigger": "ftell", "contents": "ftell()", "kind": "function", "annotation": "Get file position" },
-        { "trigger": "functions", "contents": "functions()", "kind": "function", "annotation": "A list contains functions names" },
-        { "trigger": "fwrite", "contents": "fwrite()", "kind": "function", "annotation": "Write to file" },
-        { "trigger": "getarch", "contents": "getarch()", "kind": "function", "annotation": "The name of the architecture of the Ring executable" },
-        { "trigger": "getattribute", "contents": "getattribute()", "kind": "function", "annotation": "Get attribute value" },
-        { "trigger": "getchar", "contents": "getchar()", "kind": "function", "annotation": "Get character from standard input" },
-        { "trigger": "getfilesize", "contents": "getfilesize()", "kind": "function", "annotation": "Get file size" },
-        { "trigger": "getnumber", "contents": "getnumber()", "kind": "function", "annotation": "Get number from standard input" },
-        { "trigger": "getpathtype", "contents": "getpathtype()", "kind": "function", "annotation": "Get path type" },
-        { "trigger": "getpointer", "contents": "getpointer()", "kind": "function", "annotation": "Get pointer address" },
-        { "trigger": "getptr", "contents": "getptr()", "kind": "function", "annotation": "Get pointer address" },
-        { "trigger": "getstring", "contents": "getstring()", "kind": "function", "annotation": "Get string from standard input" },
-        { "trigger": "globals", "contents": "globals()", "kind": "function", "annotation": "A list contains variables names in the global scope" },
-        { "trigger": "hex", "contents": "hex()", "kind": "function", "annotation": "Convert decimal to hexadecimal" },
-        { "trigger": "hex2str", "contents": "hex2str()", "kind": "function", "annotation": "Convert hexadecimal string to string" },
-        { "trigger": "importpackage", "contents": "importpackage()", "kind": "function", "annotation": "Import package" },
-        { "trigger": "input", "contents": "input()", "kind": "function", "annotation": "Get input from standard input" },
-        { "trigger": "insert", "contents": "insert()", "kind": "function", "annotation": "Insert item into list" },
-        { "trigger": "int2bytes", "contents": "int2bytes()", "kind": "function", "annotation": "Convert int to bytes" },
-        { "trigger": "intvalue", "contents": "intvalue()", "kind": "function", "annotation": "Get integer value of variable" },
-        { "trigger": "isalnum", "contents": "isalnum()", "kind": "function", "annotation": "Check if the value is digit/letter" },
-        { "trigger": "isalpha", "contents": "isalpha()", "kind": "function", "annotation": "Check if the value is a letter " },
-        { "trigger": "isandroid", "contents": "isandroid()", "kind": "function", "annotation": "Check if the operating system is Android" },
-        { "trigger": "isattribute", "contents": "isattribute()", "kind": "function", "annotation": "Check if attribute exists" },
-        { "trigger": "iscfunction", "contents": "iscfunction()", "kind": "function", "annotation": "Check if the C function is defined" },
-        { "trigger": "isclass", "contents": "isclass()", "kind": "function", "annotation": "Check if the Class is defined" },
-        { "trigger": "iscntrl", "contents": "iscntrl()", "kind": "function", "annotation": "Check if value is a control character" },
-        { "trigger": "isdigit", "contents": "isdigit()", "kind": "function", "annotation": "Check if value is a digit" },
-        { "trigger": "isfreebsd", "contents": "isfreebsd()", "kind": "function", "annotation": "Check if the operating system is FreeBSD" },
-        { "trigger": "isfunction", "contents": "isfunction()", "kind": "function", "annotation": "Check if the Ring function is defined" },
-        { "trigger": "isglobal", "contents": "isglobal()", "kind": "function", "annotation": "Check if the variable is defined in the global scope" },
-        { "trigger": "isgraph", "contents": "isgraph()", "kind": "function", "annotation": "Check if value can be printed (Except space)" },
-        { "trigger": "islinux", "contents": "islinux()", "kind": "function", "annotation": "Check if the operating system is Linux" },
-        { "trigger": "islist", "contents": "islist()", "kind": "function", "annotation": "Check if the value is a list" },
-        { "trigger": "islocal", "contents": "islocal()", "kind": "function", "annotation": "Check if the variable is defined in the local scope" },
-        { "trigger": "islower", "contents": "islower()", "kind": "function", "annotation": "Check if the value is lowercase letter" },
-        { "trigger": "ismacosx", "contents": "ismacosx()", "kind": "function", "annotation": "Check if the operating system is macOS" },
-        { "trigger": "ismethod", "contents": "ismethod()", "kind": "function", "annotation": "Check if the object class contains the method" },
-        { "trigger": "ismsdos", "contents": "ismsdos()", "kind": "function", "annotation": "Check if the operating system is MS-DOS" },
-        { "trigger": "isnull", "contents": "isnull()", "kind": "function", "annotation": "Check if the value is NULL" },
-        { "trigger": "isnumber", "contents": "isnumber()", "kind": "function", "annotation": "Check if the value is a number" },
-        { "trigger": "isobject", "contents": "isobject()", "kind": "function", "annotation": "Check if it's an object" },
-        { "trigger": "ispackage", "contents": "ispackage()", "kind": "function", "annotation": "Check if the Package is defined" },
-        { "trigger": "ispackageclass", "contents": "ispackageclass()", "kind": "function", "annotation": "Check if the Class is defined in the package" },
-        { "trigger": "ispointer", "contents": "ispointer()", "kind": "function", "annotation": "Check if value is a pointer" },
-        { "trigger": "isprint", "contents": "isprint()", "kind": "function", "annotation": "Check if the value occupies a printing position" },
-        { "trigger": "isprivateattribute", "contents": "isprivateattribute()", "kind": "function", "annotation": "Check if attribute is private" },
-        { "trigger": "isprivatemethod", "contents": "isprivatemethod()", "kind": "function", "annotation": "Check if method is private" },
-        { "trigger": "ispunct", "contents": "ispunct()", "kind": "function", "annotation": "Check if the value is a punctuation character" },
-        { "trigger": "isspace", "contents": "isspace()", "kind": "function", "annotation": "Check if the value is a white-space" },
-        { "trigger": "isstring", "contents": "isstring()", "kind": "function", "annotation": "Check if the value is a string" },
-        { "trigger": "isunix", "contents": "isunix()", "kind": "function", "annotation": "Check if the operating system is Unix-like OS" },
-        { "trigger": "isupper", "contents": "isupper()", "kind": "function", "annotation": "Check if the value is an uppercase alphabetic letter" },
-        { "trigger": "iswindows", "contents": "iswindows()", "kind": "function", "annotation": "Check if the operating system is Windows" },
-        { "trigger": "iswindows64", "contents": "iswindows64()", "kind": "function", "annotation": "Check if the operating system is Windows 64 bit" },
-        { "trigger": "isxdigit", "contents": "isxdigit()", "kind": "function", "annotation": "Check if the value is a hexadecimal digit character" },
-        { "trigger": "left", "contents": "left()", "kind": "function", "annotation": "Get characters starting from the left" },
-        { "trigger": "len", "contents": "len()", "kind": "function", "annotation": "Get length of string or list" },
-        { "trigger": "lines", "contents": "lines()", "kind": "function", "annotation": "Number of lines inside the string" },
-        { "trigger": "list", "contents": "list()", "kind": "function", "annotation": "Create a new list" },
-        { "trigger": "list2str", "contents": "list2str()", "kind": "function", "annotation": "Convert list to string" },
-        { "trigger": "loadlib", "contents": "loadlib()", "kind": "function", "annotation": "Load dynamic library" },
-        { "trigger": "locals", "contents": "locals()", "kind": "function", "annotation": "A list contains the variables names in the current scope" },
-        { "trigger": "log", "contents": "log()", "kind": "function", "annotation": "Natural logarithm" },
-        { "trigger": "log10", "contents": "log10()", "kind": "function", "annotation": "Base-10 logarithm" },
-        { "trigger": "lower", "contents": "lower()", "kind": "function", "annotation": "Convert string to lowercase" },
-        { "trigger": "max", "contents": "max()", "kind": "function", "annotation": "Maximum value" },
-        { "trigger": "memcpy", "contents": "memcpy()", "kind": "function", "annotation": "Copy memory" },
-        { "trigger": "memorycopy", "contents": "memorycopy()", "kind": "function", "annotation": "Copy memory" },
-        { "trigger": "mergemethods", "contents": "mergemethods()", "kind": "function", "annotation": "Merge methods from one class to another" },
-        { "trigger": "methods", "contents": "methods()", "kind": "function", "annotation": "Returns a list contains the object methods" },
-        { "trigger": "min", "contents": "min()", "kind": "function", "annotation": "Minimum value" },
-        { "trigger": "murmur3hash", "contents": "murmur3hash()", "kind": "function", "annotation": "Calculate Murmur3 hash" },
-        { "trigger": "newlist", "contents": "newlist()", "kind": "function", "annotation": "Create a new list" },
-        { "trigger": "nofprocessors", "contents": "nofprocessors()", "kind": "function", "annotation": "Number of processors" },
-        { "trigger": "nothing", "contents": "nothing()", "kind": "function", "annotation": "Do nothing, return zero" },
-        { "trigger": "nullpointer", "contents": "nullpointer()", "kind": "function", "annotation": "Get null pointer" },
-        { "trigger": "nullptr", "contents": "nullptr()", "kind": "function", "annotation": "Get null pointer" },
-        { "trigger": "number", "contents": "number()", "kind": "function", "annotation": "Convert string to number" },
-        { "trigger": "obj2ptr", "contents": "obj2ptr()", "kind": "function", "annotation": "Convert object to pointer" },
-        { "trigger": "object2pointer", "contents": "object2pointer()", "kind": "function", "annotation": "Convert object to pointer" },
-        { "trigger": "objectid", "contents": "objectid()", "kind": "function", "annotation": "Get object ID" },
-        { "trigger": "optionalfunc", "contents": "optionalfunc()", "kind": "function", "annotation": "Define optional function" },
-        { "trigger": "packageclasses", "contents": "packageclasses()", "kind": "function", "annotation": "Get list of classes in a package" },
-        { "trigger": "packagename", "contents": "packagename()", "kind": "function", "annotation": "Get current package name" },
-        { "trigger": "packages", "contents": "packages()", "kind": "function", "annotation": "Get list of packages" },
-        { "trigger": "parentclassname", "contents": "parentclassname()", "kind": "function", "annotation": "Get parent class name" },
-        { "trigger": "perror", "contents": "perror()", "kind": "function", "annotation": "Print error message" },
-        { "trigger": "pointer2object", "contents": "pointer2object()", "kind": "function", "annotation": "Convert pointer to object" },
-        { "trigger": "pointer2string", "contents": "pointer2string()", "kind": "function", "annotation": "Convert pointer to string" },
-        { "trigger": "pointercompare", "contents": "pointercompare()", "kind": "function", "annotation": "Compare pointers" },
-        { "trigger": "pow", "contents": "pow()", "kind": "function", "annotation": "Power function" },
-        { "trigger": "prevfilename", "contents": "prevfilename()", "kind": "function", "annotation": "Get previous file name" },
-        { "trigger": "print", "contents": "print()", "kind": "function", "annotation": "Print to standard output" },
-        { "trigger": "print2str", "contents": "print2str()", "kind": "function", "annotation": "Print to string" },
-        { "trigger": "ptr2obj", "contents": "ptr2obj()", "kind": "function", "annotation": "Convert pointer to object" },
-        { "trigger": "ptr2str", "contents": "ptr2str()", "kind": "function", "annotation": "Convert pointer to string" },
-        { "trigger": "ptrcmp", "contents": "ptrcmp()", "kind": "function", "annotation": "Compare pointers" },
-        { "trigger": "puts", "contents": "puts()", "kind": "function", "annotation": "Print string to standard output" },
-        { "trigger": "raise", "contents": "raise()", "kind": "function", "annotation": "Raise an error" },
-        { "trigger": "random", "contents": "random()", "kind": "function", "annotation": "Generate random number" },
-        { "trigger": "randomize", "contents": "randomize()", "kind": "function", "annotation": "Initialize random number generator" },
-        { "trigger": "read", "contents": "read()", "kind": "function", "annotation": "Read file content" },
-        { "trigger": "ref", "contents": "ref()", "kind": "function", "annotation": "Get reference to object" },
-        { "trigger": "reference", "contents": "reference()", "kind": "function", "annotation": "Get reference to object" },
-        { "trigger": "refcount", "contents": "refcount()", "kind": "function", "annotation": "Get reference count" },
-        { "trigger": "remove", "contents": "remove()", "kind": "function", "annotation": "Remove file" },
-        { "trigger": "rename", "contents": "rename()", "kind": "function", "annotation": "Rename file" },
-        { "trigger": "reverse", "contents": "reverse()", "kind": "function", "annotation": "Reverse list or string" },
-        { "trigger": "rewind", "contents": "rewind()", "kind": "function", "annotation": "Reset file position" },
-        { "trigger": "right", "contents": "right()", "kind": "function", "annotation": "Get characters starting from the right" },
-        { "trigger": "ring_give", "contents": "ring_give()", "kind": "function", "annotation": "Get input from standard input" },
-        { "trigger": "ring_see", "contents": "ring_see()", "kind": "function", "annotation": "Print message" },
-        { "trigger": "ring_state_delete", "contents": "ring_state_delete()", "kind": "function", "annotation": "Delete Ring state" },
-        { "trigger": "ring_state_filetokens", "contents": "ring_state_filetokens()", "kind": "function", "annotation": "Get file tokens" },
-        { "trigger": "ring_state_findvar", "contents": "ring_state_findvar()", "kind": "function", "annotation": "Find variable in Ring state" },
-        { "trigger": "ring_state_init", "contents": "ring_state_init()", "kind": "function", "annotation": "Initialize Ring state" },
-        { "trigger": "ring_state_main", "contents": "ring_state_main()", "kind": "function", "annotation": "Run main program" },
-        { "trigger": "ring_state_mainfile", "contents": "ring_state_mainfile()", "kind": "function", "annotation": "Run main file" },
-        { "trigger": "ring_state_new", "contents": "ring_state_new()", "kind": "function", "annotation": "Create new Ring state" },
-        { "trigger": "ring_state_newvar", "contents": "ring_state_newvar()", "kind": "function", "annotation": "Create new variable in Ring state" },
-        { "trigger": "ring_state_resume", "contents": "ring_state_resume()", "kind": "function", "annotation": "Resume Ring state" },
-        { "trigger": "ring_state_runcode", "contents": "ring_state_runcode()", "kind": "function", "annotation": "Run code in Ring state" },
-        { "trigger": "ring_state_runcodeatins", "contents": "ring_state_runcodeatins()", "kind": "function", "annotation": "Run code at instruction in Ring state" },
-        { "trigger": "ring_state_runfile", "contents": "ring_state_runfile()", "kind": "function", "annotation": "Run file in Ring state" },
-        { "trigger": "ring_state_runobjectfile", "contents": "ring_state_runobjectfile()", "kind": "function", "annotation": "Run object file in Ring state" },
-        { "trigger": "ring_state_scannererror", "contents": "ring_state_scannererror()", "kind": "function", "annotation": "Get scanner error status" },
-        { "trigger": "ring_state_setvar", "contents": "ring_state_setvar()", "kind": "function", "annotation": "Set variable in Ring state" },
-        { "trigger": "ring_state_stringtokens", "contents": "ring_state_stringtokens()", "kind": "function", "annotation": "Get string tokens" },
-        { "trigger": "ringvm_callfunc", "contents": "ringvm_callfunc()", "kind": "function", "annotation": "Call function in Ring VM" },
-        { "trigger": "ringvm_calllist", "contents": "ringvm_calllist()", "kind": "function", "annotation": "Get call list" },
-        { "trigger": "ringvm_cfunctionslist", "contents": "ringvm_cfunctionslist()", "kind": "function", "annotation": "Get C functions list" },
-        { "trigger": "ringvm_classeslist", "contents": "ringvm_classeslist()", "kind": "function", "annotation": "Get classes list" },
-        { "trigger": "ringvm_codelist", "contents": "ringvm_codelist()", "kind": "function", "annotation": "Get code list" },
-        { "trigger": "ringvm_evalinscope", "contents": "ringvm_evalinscope()", "kind": "function", "annotation": "Evaluate code in scope" },
-        { "trigger": "ringvm_fileslist", "contents": "ringvm_fileslist()", "kind": "function", "annotation": "Get files list" },
-        { "trigger": "ringvm_functionslist", "contents": "ringvm_functionslist()", "kind": "function", "annotation": "Get functions list" },
-        { "trigger": "ringvm_genarray", "contents": "ringvm_genarray()", "kind": "function", "annotation": "Generate array" },
-        { "trigger": "ringvm_give", "contents": "ringvm_give()", "kind": "function", "annotation": "Give value to variable" },
-        { "trigger": "ringvm_hideerrormsg", "contents": "ringvm_hideerrormsg()", "kind": "function", "annotation": "Hide error messages" },
-        { "trigger": "ringvm_info", "contents": "ringvm_info()", "kind": "function", "annotation": "Get Ring VM information" },
-        { "trigger": "ringvm_ismempool", "contents": "ringvm_ismempool()", "kind": "function", "annotation": "Check if memory pool is active" },
-        { "trigger": "ringvm_memorylist", "contents": "ringvm_memorylist()", "kind": "function", "annotation": "Get memory list" },
-        { "trigger": "ringvm_packageslist", "contents": "ringvm_packageslist()", "kind": "function", "annotation": "Get packages list" },
-        { "trigger": "ringvm_passerror", "contents": "ringvm_passerror()", "kind": "function", "annotation": "Pass error" },
-        { "trigger": "ringvm_runcode", "contents": "ringvm_runcode()", "kind": "function", "annotation": "Run code in Ring VM" },
-        { "trigger": "ringvm_scopescount", "contents": "ringvm_scopescount()", "kind": "function", "annotation": "Get scopes count" },
-        { "trigger": "ringvm_see", "contents": "ringvm_see()", "kind": "function", "annotation": "Print message" },
-        { "trigger": "ringvm_settrace", "contents": "ringvm_settrace()", "kind": "function", "annotation": "Set trace function" },
-        { "trigger": "ringvm_tracedata", "contents": "ringvm_tracedata()", "kind": "function", "annotation": "Get trace data" },
-        { "trigger": "ringvm_traceevent", "contents": "ringvm_traceevent()", "kind": "function", "annotation": "Get trace event" },
-        { "trigger": "ringvm_tracefunc", "contents": "ringvm_tracefunc()", "kind": "function", "annotation": "Get trace function" },
-        { "trigger": "setattribute", "contents": "setattribute()", "kind": "function", "annotation": "Set object attribute" },
-        { "trigger": "setpointer", "contents": "setpointer()", "kind": "function", "annotation": "Set pointer address" },
-        { "trigger": "setptr", "contents": "setptr()", "kind": "function", "annotation": "Set pointer address" },
-        { "trigger": "shutdown", "contents": "shutdown()", "kind": "function", "annotation": "Close the application" },
-        { "trigger": "sin", "contents": "sin()", "kind": "function", "annotation": "Sine function" },
-        { "trigger": "sinh", "contents": "sinh()", "kind": "function", "annotation": "Hyperbolic sine" },
-        { "trigger": "sort", "contents": "sort()", "kind": "function", "annotation": "Sort list" },
-        { "trigger": "space", "contents": "space()", "kind": "function", "annotation": "Create string of spaces" },
-        { "trigger": "sqrt", "contents": "sqrt()", "kind": "function", "annotation": "Square root" },
-        { "trigger": "srandom", "contents": "srandom()", "kind": "function", "annotation": "Set random seed" },
-        { "trigger": "str2hex", "contents": "str2hex()", "kind": "function", "annotation": "Convert string to hexadecimal" },
-        { "trigger": "str2hexcstyle", "contents": "str2hexcstyle()", "kind": "function", "annotation": "Convert string to C-style hexadecimal" },
-        { "trigger": "str2list", "contents": "str2list()", "kind": "function", "annotation": "Convert string to list" },
-        { "trigger": "strcmp", "contents": "strcmp()", "kind": "function", "annotation": "Compare strings" },
-        { "trigger": "string", "contents": "string()", "kind": "function", "annotation": "Convert to string" },
-        { "trigger": "substr", "contents": "substr()", "kind": "function", "annotation": "Get substring" },
-        { "trigger": "swap", "contents": "swap()", "kind": "function", "annotation": "Swap list items" },
-        { "trigger": "sysget", "contents": "sysget()", "kind": "function", "annotation": "Get system variable" },
-        { "trigger": "sysset", "contents": "sysset()", "kind": "function", "annotation": "Set system variable" },
-        { "trigger": "syssleep", "contents": "syssleep()", "kind": "function", "annotation": "Sleep for milliseconds" },
-        { "trigger": "system", "contents": "system()", "kind": "function", "annotation": "Execute system command" },
-        { "trigger": "sysunset", "contents": "sysunset()", "kind": "function", "annotation": "Unset system variable" },
-        { "trigger": "tan", "contents": "tan()", "kind": "function", "annotation": "Tangent function" },
-        { "trigger": "tanh", "contents": "tanh()", "kind": "function", "annotation": "Hyperbolic tangent" },
-        { "trigger": "tempfile", "contents": "tempfile()", "kind": "function", "annotation": "Create temporary file" },
-        { "trigger": "tempname", "contents": "tempname()", "kind": "function", "annotation": "Generate temporary file name" },
-        { "trigger": "time", "contents": "time()", "kind": "function", "annotation": "Get current time" },
-        { "trigger": "timelist", "contents": "timelist()", "kind": "function", "annotation": "Get time and date information" },
-        { "trigger": "trim", "contents": "trim()", "kind": "function", "annotation": "Remove leading and trailing spaces" },
-        { "trigger": "type", "contents": "type()", "kind": "function", "annotation": "Get type of value" },
-        { "trigger": "ungetc", "contents": "ungetc()", "kind": "function", "annotation": "Push character back to input stream" },
-        { "trigger": "unsigned", "contents": "unsigned()", "kind": "function", "annotation": "Perform operation using unsigned numbers" },
-        { "trigger": "upper", "contents": "upper()", "kind": "function", "annotation": "Convert string to uppercase" },
-        { "trigger": "uptime", "contents": "uptime()", "kind": "function", "annotation": "Get system uptime" },
-        { "trigger": "variablepointer", "contents": "variablepointer()", "kind": "function", "annotation": "Get variable pointer" },
-        { "trigger": "varptr", "contents": "varptr()", "kind": "function", "annotation": "Get variable pointer" },
-        { "trigger": "version", "contents": "version()", "kind": "function", "annotation": "Get Ring version" },
-        { "trigger": "windowsnl", "contents": "windowsnl()", "kind": "function", "annotation": "Get Windows newline" },
-        { "trigger": "write", "contents": "write()", "kind": "function", "annotation": "Write to file" }
+        {
+            "trigger": "see",
+            "contents": "see ${1:cString}",
+            "kind": "function",
+            "annotation": "Print to console"
+        },
+        {
+            "trigger": "put",
+            "contents": "put ${1:cString}",
+            "kind": "function",
+            "annotation": "Print to console"
+        },
+        {
+            "trigger": "print",
+            "contents": "print(${1:cString})",
+            "kind": "function",
+            "annotation": "Print to console"
+        },
+        {
+            "trigger": "func",
+            "contents": "func ${1:functionName}\n\t${0}\n\treturn",
+            "kind": "snippet",
+            "annotation": "Define a function"
+        },
+        {
+            "trigger": "def",
+            "contents": "def ${1:functionName}\n\t${0}\n\treturn\nend",
+            "kind": "snippet",
+            "annotation": "Define a function"
+        },
+        {
+            "trigger": "if Statement",
+            "contents": "if ${1:condition}\n\t${0}\nok",
+            "kind": "snippet",
+            "annotation": "if Statement"
+        },
+        {
+            "trigger": "if-else Statement",
+            "contents": "if ${1:condition}\n     ${2}\nelse\n     ${0}\nok",
+            "kind": "snippet",
+            "annotation": "if-else Statement"
+        },
+        {
+            "trigger": "if-elseif Statement",
+            "contents": "if ${1:condition}\n     ${2}\nelseif ${3:condition}\n     ${0}\nok",
+            "kind": "snippet",
+            "annotation": "if-elseif Statement"
+        },
+        {
+            "trigger": "if-elseif-else Statement",
+            "contents": "if ${1:condition}\n     ${2}\nelseif ${3:condition}\n     ${4}\nelse\n     ${5}\nok",
+            "kind": "snippet",
+            "annotation": "if-elseif-else Statement"
+        },
+        {
+            "trigger": "for Loop",
+            "contents": "for ${1:i} = ${2:1} to ${3:10}\n     ${0}\nnext",
+            "kind": "snippet",
+            "annotation": "For loop"
+        },
+        {
+            "trigger": "foreach Loop",
+            "contents": "foreach ${1:i} in ${2:myList}\n     ${0}\nnext",
+            "kind": "snippet",
+            "annotation": "Foreach-in loop"
+        },
+        {
+            "trigger": "for-in Loop",
+            "contents": "for ${1:i} in ${2:myList}\n     ${0}\nnext",
+            "kind": "snippet",
+            "annotation": "For-in loop"
+        },
+        {
+            "trigger": "while Loop",
+            "contents": "while ${1:condition}\n     ${0}\nend",
+            "kind": "snippet",
+            "annotation": "While loop"
+        },
+        {
+            "trigger": "switch Statement",
+            "contents": "switch ${1:expression}\non ${2:value1} ${3:statement1}\non ${4:value2} ${5:statement2}\nother ${6:defaultStatement}\noff",
+            "kind": "snippet",
+            "annotation": "Switch statement"
+        },
+        {
+            "trigger": "try-catch",
+            "contents": "try\n\t${1}\ncatch\n\t${0}\ndone",
+            "kind": "snippet",
+            "annotation": "Try-Catch block"
+        },
+        {
+            "trigger": "class",
+            "contents": "class ${1:ClassName}\n\t${0}",
+            "kind": "snippet",
+            "annotation": "Define a class"
+        },
+        {
+            "trigger": "load",
+            "contents": "load \"${1:filename}.ring\"",
+            "kind": "function",
+            "annotation": "Load a Ring file/package"
+        },
+        {
+            "trigger": "loadlib",
+            "contents": "loadlib(\"${1:library}\")",
+            "kind": "function",
+            "annotation": "Load a dynamic library"
+        },
+        {
+            "trigger": "package",
+            "contents": "package ${1:PackageName}\n\t${0}",
+            "kind": "snippet",
+            "annotation": "Define a package"
+        },
+        {
+            "trigger": "import",
+            "contents": "import ${1:PackageName}",
+            "kind": "snippet",
+            "annotation": "Import a package"
+        },
+        {
+            "trigger": "changeringkeyword",
+            "contents": "changeringkeyword ${1:OldKeyword} ${2:NewKeyword}",
+            "kind": "function",
+            "annotation": "Modify Ring language keywords"
+        },
+        {
+            "trigger": "changeringoperator",
+            "contents": "changeringoperator ${1:OldOperator} ${2:NewOperator}",
+            "kind": "function",
+            "annotation": "Modify Ring language operators"
+        },
+        {
+            "trigger": "enablehashcomments",
+            "contents": "enablehashcomments",
+            "kind": "function",
+            "annotation": "Enable '#' for single-line comments"
+        },
+        {
+            "trigger": "disablehashcomments",
+            "contents": "disablehashcomments",
+            "kind": "function",
+            "annotation": "Disable '#' for single-line comments"
+        },
+        {
+            "trigger": "loadsyntax",
+            "contents": "loadsyntax \"${1:syntax_rules_filename}\"",
+            "kind": "function",
+            "annotation": "Load custom syntax rules from a file"
+        },
+        {
+            "trigger": "acos",
+            "contents": "acos(${1:x})",
+            "kind": "function",
+            "annotation": "The principal value of the arc cosine of x"
+        },
+        {
+            "trigger": "add",
+            "contents": "add(${1:List}, ${2:Item})",
+            "kind": "function",
+            "annotation": "Add item to list"
+        },
+        {
+            "trigger": "addattribute",
+            "contents": "addattribute(${1:Object}, ${2:cAttributeName|aAttributesList})",
+            "kind": "function",
+            "annotation": "Add attribute to object"
+        },
+        {
+            "trigger": "adddays",
+            "contents": "adddays(${1:cDate}, ${2:nDays})",
+            "kind": "function",
+            "annotation": "Date from cDate and after nDays"
+        },
+        {
+            "trigger": "addmethod",
+            "contents": "addmethod(${1:Object}, ${2:cNewMethodName}, ${3:cMethodName|AnonymousFunction})",
+            "kind": "function",
+            "annotation": "Add method to object"
+        },
+        {
+            "trigger": "ascii",
+            "contents": "ascii(${1:character})",
+            "kind": "function",
+            "annotation": "ASCII Code"
+        },
+        {
+            "trigger": "asin",
+            "contents": "asin(${1:x})",
+            "kind": "function",
+            "annotation": "The principal value of the arc sine of x"
+        },
+        {
+            "trigger": "assert",
+            "contents": "assert(${1:condition})",
+            "kind": "function",
+            "annotation": "Assert condition"
+        },
+        {
+            "trigger": "atan",
+            "contents": "atan(${1:x})",
+            "kind": "function",
+            "annotation": "The principal value of the arc tangent of x"
+        },
+        {
+            "trigger": "atan2",
+            "contents": "atan2(${1:y}, ${2:x})",
+            "kind": "function",
+            "annotation": "The principal arc tangent of y/x"
+        },
+        {
+            "trigger": "attributes",
+            "contents": "attributes(${1:object})",
+            "kind": "function",
+            "annotation": "Returns a list contains the object attributes"
+        },
+        {
+            "trigger": "binarysearch",
+            "contents": "binarysearch(${1:List}, ${2:ItemValue}${3:, ${4:nColumn}})",
+            "kind": "function",
+            "annotation": "Search in list, returns the Item Index"
+        },
+        {
+            "trigger": "bytes2double",
+            "contents": "bytes2double(${1:cBytes})",
+            "kind": "function",
+            "annotation": "Convert bytes to double"
+        },
+        {
+            "trigger": "bytes2float",
+            "contents": "bytes2float(${1:cBytes})",
+            "kind": "function",
+            "annotation": "Convert bytes to float"
+        },
+        {
+            "trigger": "bytes2int",
+            "contents": "bytes2int(${1:cBytes})",
+            "kind": "function",
+            "annotation": "Convert bytes to int"
+        },
+        {
+            "trigger": "callgarbagecollector",
+            "contents": "callgarbagecollector()",
+            "kind": "function",
+            "annotation": "Call garbage collector"
+        },
+        {
+            "trigger": "callgc",
+            "contents": "callgc()",
+            "kind": "function",
+            "annotation": "Call garbage collector"
+        },
+        {
+            "trigger": "ceil",
+            "contents": "ceil(${1:x})",
+            "kind": "function",
+            "annotation": "The smallest integer value"
+        },
+        {
+            "trigger": "cfunctions",
+            "contents": "cfunctions()",
+            "kind": "function",
+            "annotation": "A list contains functions names"
+        },
+        {
+            "trigger": "char",
+            "contents": "char(${1:ASCII Code})",
+            "kind": "function",
+            "annotation": "Convert ASCII Code to character"
+        },
+        {
+            "trigger": "chdir",
+            "contents": "chdir(${1:cNewPath})",
+            "kind": "function",
+            "annotation": "Change the current directory"
+        },
+        {
+            "trigger": "checkoverflow",
+            "contents": "checkoverflow(${1:lFlag})",
+            "kind": "function",
+            "annotation": "Check overflow"
+        },
+        {
+            "trigger": "classes",
+            "contents": "classes()",
+            "kind": "function",
+            "annotation": "A list contains classes names"
+        },
+        {
+            "trigger": "classname",
+            "contents": "classname(${1:object})",
+            "kind": "function",
+            "annotation": "Returns the object class name"
+        },
+        {
+            "trigger": "clearerr",
+            "contents": "clearerr(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Clear error indicator for file"
+        },
+        {
+            "trigger": "clock",
+            "contents": "clock()",
+            "kind": "function",
+            "annotation": "The number of clock ticks from program start"
+        },
+        {
+            "trigger": "clockspersecond",
+            "contents": "clockspersecond()",
+            "kind": "function",
+            "annotation": "Number of clocks in one second"
+        },
+        {
+            "trigger": "closelib",
+            "contents": "closelib(${1:pDLL})",
+            "kind": "function",
+            "annotation": "Close dynamic library"
+        },
+        {
+            "trigger": "copy",
+            "contents": "copy(\"${1:cString}\", ${2:nCount})",
+            "kind": "function",
+            "annotation": "String replicated nCount times"
+        },
+        {
+            "trigger": "cos",
+            "contents": "cos(${1:x})",
+            "kind": "function",
+            "annotation": "The cosine of an angle of x radians"
+        },
+        {
+            "trigger": "cosh",
+            "contents": "cosh(${1:x})",
+            "kind": "function",
+            "annotation": "The hyperbolic cosine of x radians"
+        },
+        {
+            "trigger": "currentdir",
+            "contents": "currentdir()",
+            "kind": "function",
+            "annotation": "String contains the path of the current directory"
+        },
+        {
+            "trigger": "date",
+            "contents": "date()",
+            "kind": "function",
+            "annotation": "String represent the date \"dd/mm/yyyy\""
+        },
+        {
+            "trigger": "dec",
+            "contents": "dec(${1:hexadecimal})",
+            "kind": "function",
+            "annotation": "Convert hexadecimal to decimal"
+        },
+        {
+            "trigger": "decimals",
+            "contents": "decimals(${1:n})",
+            "kind": "function",
+            "annotation": "Determine the decimals digits after the point"
+        },
+        {
+            "trigger": "del",
+            "contents": "del(${1:list}, ${2:index})",
+            "kind": "function",
+            "annotation": "Delete item from list"
+        },
+        {
+            "trigger": "diffdays",
+            "contents": "diffdays(${1:cDate1}, ${2:cDate2})",
+            "kind": "function",
+            "annotation": "Number of days (Date1 - Date2)"
+        },
+        {
+            "trigger": "dir",
+            "contents": "dir(${1:cFolderPath})",
+            "kind": "function",
+            "annotation": "List contains files & sub folders"
+        },
+        {
+            "trigger": "direxists",
+            "contents": "direxists(${1:cDirPath})",
+            "kind": "function",
+            "annotation": "Check if the directory exists"
+        },
+        {
+            "trigger": "double2bytes",
+            "contents": "double2bytes(${1:nNumber})",
+            "kind": "function",
+            "annotation": "Convert double to bytes"
+        },
+        {
+            "trigger": "eval",
+            "contents": "eval(${1:cCode})",
+            "kind": "function",
+            "annotation": "Evaluate code"
+        },
+        {
+            "trigger": "exefilename",
+            "contents": "exefilename()",
+            "kind": "function",
+            "annotation": "String contains the Ring executable file name"
+        },
+        {
+            "trigger": "exefolder",
+            "contents": "exefolder()",
+            "kind": "function",
+            "annotation": "String contains the Ring executable path"
+        },
+        {
+            "trigger": "exp",
+            "contents": "exp(${1:x})",
+            "kind": "function",
+            "annotation": "The value of e raised to the xth power"
+        },
+        {
+            "trigger": "fabs",
+            "contents": "fabs(${1:x})",
+            "kind": "function",
+            "annotation": "The absolute value of x"
+        },
+        {
+            "trigger": "fclose",
+            "contents": "fclose(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Close file stream"
+        },
+        {
+            "trigger": "feof",
+            "contents": "feof(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Check if it's the EOF"
+        },
+        {
+            "trigger": "ferror",
+            "contents": "ferror(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Check for file stream error"
+        },
+        {
+            "trigger": "fexists",
+            "contents": "fexists(${1:cFileName})",
+            "kind": "function",
+            "annotation": "Check if the file exists"
+        },
+        {
+            "trigger": "fflush",
+            "contents": "fflush(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Flush file buffer"
+        },
+        {
+            "trigger": "fgetc",
+            "contents": "fgetc(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Returns character or EOF"
+        },
+        {
+            "trigger": "fgetpos",
+            "contents": "fgetpos(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Position handle"
+        },
+        {
+            "trigger": "fgets",
+            "contents": "fgets(${1:FileHandle}, ${2:nSize})",
+            "kind": "function",
+            "annotation": "Read new line from the stream"
+        },
+        {
+            "trigger": "filename",
+            "contents": "filename()",
+            "kind": "function",
+            "annotation": "String contains the active source file name"
+        },
+        {
+            "trigger": "find",
+            "contents": "find(${1:List}, ${2:ItemValue}${3:, ${4:nColumn}}${5:, ${6:cAttribute}})",
+            "kind": "function",
+            "annotation": "Find item in list"
+        },
+        {
+            "trigger": "float2bytes",
+            "contents": "float2bytes(${1:nNumber})",
+            "kind": "function",
+            "annotation": "Convert float to bytes"
+        },
+        {
+            "trigger": "floor",
+            "contents": "floor(${1:x})",
+            "kind": "function",
+            "annotation": "The largest integer value"
+        },
+        {
+            "trigger": "fopen",
+            "contents": "fopen(${1:cFileName}, ${2:cMode})",
+            "kind": "function",
+            "annotation": "Open file"
+        },
+        {
+            "trigger": "fputc",
+            "contents": "fputc(${1:FileHandle}, ${2:cChar})",
+            "kind": "function",
+            "annotation": "Write character to file"
+        },
+        {
+            "trigger": "fputs",
+            "contents": "fputs(${1:FileHandle}, ${2:cString})",
+            "kind": "function",
+            "annotation": "Write string to file"
+        },
+        {
+            "trigger": "fread",
+            "contents": "fread(${1:FileHandle}, ${2:nSize})",
+            "kind": "function",
+            "annotation": "Read from file"
+        },
+        {
+            "trigger": "freopen",
+            "contents": "freopen(${1:cFileName}, ${2:cMode}, ${3:FileHandle})",
+            "kind": "function",
+            "annotation": "Reopen file"
+        },
+        {
+            "trigger": "fseek",
+            "contents": "fseek(${1:FileHandle}, ${2:nOffset}, ${3:nWhence})",
+            "kind": "function",
+            "annotation": "Set the file position"
+        },
+        {
+            "trigger": "fsetpos",
+            "contents": "fsetpos(${1:FileHandle}, ${2:PositionHandle})",
+            "kind": "function",
+            "annotation": "Set the file position"
+        },
+        {
+            "trigger": "ftell",
+            "contents": "ftell(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Get file position"
+        },
+        {
+            "trigger": "functions",
+            "contents": "functions()",
+            "kind": "function",
+            "annotation": "A list contains functions names"
+        },
+        {
+            "trigger": "fwrite",
+            "contents": "fwrite(${1:FileHandle}, ${2:cString})",
+            "kind": "function",
+            "annotation": "Write to file"
+        },
+        {
+            "trigger": "getarch",
+            "contents": "getarch()",
+            "kind": "function",
+            "annotation": "The name of the architecture of the Ring executable"
+        },
+        {
+            "trigger": "getattribute",
+            "contents": "getattribute(${1:oObject}, ${2:cAttributeName})",
+            "kind": "function",
+            "annotation": "Get attribute value"
+        },
+        {
+            "trigger": "getchar",
+            "contents": "getchar()",
+            "kind": "function",
+            "annotation": "Get character from standard input"
+        },
+        {
+            "trigger": "getfilesize",
+            "contents": "getfilesize(${1:cFilePath})",
+            "kind": "function",
+            "annotation": "Get file size"
+        },
+        {
+            "trigger": "getnumber",
+            "contents": "getnumber()",
+            "kind": "function",
+            "annotation": "Get number from standard  input"
+        },
+        {
+            "trigger": "getpathtype",
+            "contents": "getpathtype(${1:cPath})",
+            "kind": "function",
+            "annotation": "Get path type"
+        },
+        {
+            "trigger": "getpointer",
+            "contents": "getpointer(${1:pointer})",
+            "kind": "function",
+            "annotation": "Get pointer address"
+        },
+        {
+            "trigger": "getptr",
+            "contents": "getptr(${1:pointer})",
+            "kind": "function",
+            "annotation": "Get pointer address"
+        },
+        {
+            "trigger": "getstring",
+            "contents": "getstring()",
+            "kind": "function",
+            "annotation": "Get string from standard input"
+        },
+        {
+            "trigger": "globals",
+            "contents": "globals()",
+            "kind": "function",
+            "annotation": "A list contains variables names in the global scope"
+        },
+        {
+            "trigger": "hex",
+            "contents": "hex(${1:decimal})",
+            "kind": "function",
+            "annotation": "Convert decimal to hexadecimal"
+        },
+        {
+            "trigger": "hex2str",
+            "contents": "hex2str(\"${1:Hexadecimal string}\")",
+            "kind": "function",
+            "annotation": "Convert hexadecimal string to string"
+        },
+        {
+            "trigger": "importpackage",
+            "contents": "importpackage(${1:cPackageName})",
+            "kind": "function",
+            "annotation": "Import package"
+        },
+        {
+            "trigger": "input",
+            "contents": "input(${1:nCount})",
+            "kind": "function",
+            "annotation": "Get input from standard input"
+        },
+        {
+            "trigger": "insert",
+            "contents": "insert(${1:List}, ${2:Index}, ${3:Item})",
+            "kind": "function",
+            "annotation": "Insert item into list"
+        },
+        {
+            "trigger": "int2bytes",
+            "contents": "int2bytes(${1:nNumber})",
+            "kind": "function",
+            "annotation": "Convert int to bytes"
+        },
+        {
+            "trigger": "intvalue",
+            "contents": "intvalue(${1:cVariableName})",
+            "kind": "function",
+            "annotation": "Get integer value of variable"
+        },
+        {
+            "trigger": "isalnum",
+            "contents": "isalnum(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is digit/letter"
+        },
+        {
+            "trigger": "isalpha",
+            "contents": "isalpha(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is a letter"
+        },
+        {
+            "trigger": "isandroid",
+            "contents": "isandroid()",
+            "kind": "function",
+            "annotation": "Check if the operating system is Android"
+        },
+        {
+            "trigger": "isattribute",
+            "contents": "isattribute(${1:object}, ${2:cAttributeName})",
+            "kind": "function",
+            "annotation": "Check if attribute exists"
+        },
+        {
+            "trigger": "iscfunction",
+            "contents": "iscfunction(${1:cFunctionName})",
+            "kind": "function",
+            "annotation": "Check if the C function is defined"
+        },
+        {
+            "trigger": "isclass",
+            "contents": "isclass(${1:cClassName})",
+            "kind": "function",
+            "annotation": "Check if the Class is defined"
+        },
+        {
+            "trigger": "iscntrl",
+            "contents": "iscntrl(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value is a control character"
+        },
+        {
+            "trigger": "isdigit",
+            "contents": "isdigit(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value is a digit"
+        },
+        {
+            "trigger": "isfreebsd",
+            "contents": "isfreebsd()",
+            "kind": "function",
+            "annotation": "Check if the operating system is FreeBSD"
+        },
+        {
+            "trigger": "isfunction",
+            "contents": "isfunction(${1:cFunctionName})",
+            "kind": "function",
+            "annotation": "Check if the Ring function is defined"
+        },
+        {
+            "trigger": "isglobal",
+            "contents": "isglobal(${1:cVariableName})",
+            "kind": "function",
+            "annotation": "Check if the variable is defined in the global scope"
+        },
+        {
+            "trigger": "isgraph",
+            "contents": "isgraph(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value can be printed (Except space)"
+        },
+        {
+            "trigger": "islinux",
+            "contents": "islinux()",
+            "kind": "function",
+            "annotation": "Check if the operating system is Linux"
+        },
+        {
+            "trigger": "islist",
+            "contents": "islist(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is a list"
+        },
+        {
+            "trigger": "islocal",
+            "contents": "islocal(${1:cVariableName})",
+            "kind": "function",
+            "annotation": "Check if the variable is defined in the local scope"
+        },
+        {
+            "trigger": "islower",
+            "contents": "islower(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is lowercase letter"
+        },
+        {
+            "trigger": "ismacosx",
+            "contents": "ismacosx()",
+            "kind": "function",
+            "annotation": "Check if the operating system is macOS"
+        },
+        {
+            "trigger": "ismethod",
+            "contents": "ismethod(${1:object}, ${2:cMethodName})",
+            "kind": "function",
+            "annotation": "Check if the object class contains the method"
+        },
+        {
+            "trigger": "ismsdos",
+            "contents": "ismsdos()",
+            "kind": "function",
+            "annotation": "Check if the operating system is MS-DOS"
+        },
+        {
+            "trigger": "isnull",
+            "contents": "isnull(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is NULL"
+        },
+        {
+            "trigger": "isnumber",
+            "contents": "isnumber(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is a number"
+        },
+        {
+            "trigger": "isobject",
+            "contents": "isobject(${1:variable})",
+            "kind": "function",
+            "annotation": "Check if it's an object"
+        },
+        {
+            "trigger": "ispackage",
+            "contents": "ispackage(${1:cPackageName})",
+            "kind": "function",
+            "annotation": "Check if the Package is defined"
+        },
+        {
+            "trigger": "ispackageclass",
+            "contents": "ispackageclass(${1:cPackageName}, ${2:cClassName})",
+            "kind": "function",
+            "annotation": "Check if the Class is defined in the package"
+        },
+        {
+            "trigger": "ispointer",
+            "contents": "ispointer(${1:vPara})",
+            "kind": "function",
+            "annotation": "Check if the value is a pointer"
+        },
+        {
+            "trigger": "isprint",
+            "contents": "isprint(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value can be printed"
+        },
+        {
+            "trigger": "isprivateattribute",
+            "contents": "isprivateattribute(${1:object}, ${2:cAttributeName})",
+            "kind": "function",
+            "annotation": "Check if the attribute is private"
+        },
+        {
+            "trigger": "isprivatemethod",
+            "contents": "isprivatemethod(${1:object}, ${2:cMethodName})",
+            "kind": "function",
+            "annotation": "Check if the method is private"
+        },
+        {
+            "trigger": "ispunct",
+            "contents": "ispunct(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value is a punctuation character"
+        },
+        {
+            "trigger": "isspace",
+            "contents": "isspace(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value is a white-space"
+        },
+        {
+            "trigger": "isstring",
+            "contents": "isstring(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is a string"
+        },
+        {
+            "trigger": "isunix",
+            "contents": "isunix()",
+            "kind": "function",
+            "annotation": "Check if the operating system is Unix-like"
+        },
+        {
+            "trigger": "isupper",
+            "contents": "isupper(${1:value})",
+            "kind": "function",
+            "annotation": "Check if the value is uppercase letter"
+        },
+        {
+            "trigger": "iswindows",
+            "contents": "iswindows()",
+            "kind": "function",
+            "annotation": "Check if the operating system is Windows"
+        },
+        {
+            "trigger": "iswindows64",
+            "contents": "iswindows64()",
+            "kind": "function",
+            "annotation": "Check if the operating system is Windows 64bit"
+        },
+        {
+            "trigger": "isxdigit",
+            "contents": "isxdigit(${1:value})",
+            "kind": "function",
+            "annotation": "Check if value is a hexadecimal digit"
+        },
+        {
+            "trigger": "left",
+            "contents": "left(${1:cString}, ${2:count})",
+            "kind": "function",
+            "annotation": "Get characters starting from the left"
+        },
+        {
+            "trigger": "len",
+            "contents": "len(${1:string|List})",
+            "kind": "function",
+            "annotation": "Get length of string or list"
+        },
+        {
+            "trigger": "lines",
+            "contents": "lines(${1:cString})",
+            "kind": "function",
+            "annotation": "Number of lines inside the string"
+        },
+        {
+            "trigger": "list",
+            "contents": "list(${1:nSize})",
+            "kind": "function",
+            "annotation": "Create a new list"
+        },
+        {
+            "trigger": "list2str",
+            "contents": "list2str(${1:list})",
+            "kind": "function",
+            "annotation": "Convert list to string"
+        },
+        {
+            "trigger": "locals",
+            "contents": "locals()",
+            "kind": "function",
+            "annotation": "A list contains variables names in the current scope"
+        },
+        {
+            "trigger": "log",
+            "contents": "log(${1:x}${2:, ${3:b}})",
+            "kind": "function",
+            "annotation": "The natural logarithm of x (the base of e)"
+        },
+        {
+            "trigger": "log10",
+            "contents": "log10(${1:x})",
+            "kind": "function",
+            "annotation": "The common logarithm (base-10 logarithm) of x"
+        },
+        {
+            "trigger": "lower",
+            "contents": "lower(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert string letters to lower case"
+        },
+        {
+            "trigger": "max",
+            "contents": "max(${1:nNumber1}, ${2:nNumber2})",
+            "kind": "function",
+            "annotation": "Maximum number"
+        },
+        {
+            "trigger": "memcpy",
+            "contents": "memcpy(${1:pDestinationPointer}, ${2:cSourceString}, ${3:nSize})",
+            "kind": "function",
+            "annotation": "Copy memory"
+        },
+        {
+            "trigger": "memorycopy",
+            "contents": "memorycopy(${1:pDestinationPointer}, ${2:cSourceString}, ${3:nSize})",
+            "kind": "function",
+            "annotation": "Copy memory"
+        },
+        {
+            "trigger": "mergemethods",
+            "contents": "mergemethods(${1:cClassNameDestination}, ${2:cClassNameSource})",
+            "kind": "function",
+            "annotation": "Merge methods from one class to another"
+        },
+        {
+            "trigger": "methods",
+            "contents": "methods(${1:object})",
+            "kind": "function",
+            "annotation": "Returns a list contains the object methods"
+        },
+        {
+            "trigger": "min",
+            "contents": "min(${1:nNumber1}, ${2:nNumber2})",
+            "kind": "function",
+            "annotation": "Minimum number"
+        },
+        {
+            "trigger": "murmur3hash",
+            "contents": "murmur3hash(${1:cString}, ${2:nNumber})",
+            "kind": "function",
+            "annotation": "Calculate MurmurHash3 hash"
+        },
+        {
+            "trigger": "newlist",
+            "contents": "newlist(${1:nSize})",
+            "kind": "function",
+            "annotation": "Create a new list"
+        },
+        {
+            "trigger": "nofprocessors",
+            "contents": "nofprocessors()",
+            "kind": "function",
+            "annotation": "Get number of processors"
+        },
+        {
+            "trigger": "nothing",
+            "contents": "nothing(${1:Any number/type of parameters})",
+            "kind": "function",
+            "annotation": "Return Zero (0)"
+        },
+        {
+            "trigger": "nullpointer",
+            "contents": "nullpointer()",
+            "kind": "function",
+            "annotation": "Get NULL pointer"
+        },
+        {
+            "trigger": "nullptr",
+            "contents": "nullptr()",
+            "kind": "function",
+            "annotation": "Get NULL pointer"
+        },
+        {
+            "trigger": "number",
+            "contents": "number(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert string to number"
+        },
+        {
+            "trigger": "obj2ptr",
+            "contents": "obj2ptr(${1:List|Object})",
+            "kind": "function",
+            "annotation": "Convert to Low Level Object (C Pointer)"
+        },
+        {
+            "trigger": "object2pointer",
+            "contents": "object2pointer(${1:List|Object})",
+            "kind": "function",
+            "annotation": "Convert to Low Level Object (C Pointer)"
+        },
+        {
+            "trigger": "objectid",
+            "contents": "objectid(${1:object})",
+            "kind": "function",
+            "annotation": "Returns the object id"
+        },
+        {
+            "trigger": "optionalfunc",
+            "contents": "optionalfunc(${1:cFuncName})",
+            "kind": "function",
+            "annotation": "Define optional function"
+        },
+        {
+            "trigger": "packageclasses",
+            "contents": "packageclasses(${1:cPackageName})",
+            "kind": "function",
+            "annotation": "A list contains classes names inside the package"
+        },
+        {
+            "trigger": "packagename",
+            "contents": "packagename()",
+            "kind": "function",
+            "annotation": "Returns the package name of the latest successful import"
+        },
+        {
+            "trigger": "packages",
+            "contents": "packages()",
+            "kind": "function",
+            "annotation": "A list contains packages names"
+        },
+        {
+            "trigger": "parentclassname",
+            "contents": "parentclassname(${1:object})",
+            "kind": "function",
+            "annotation": "Returns the parent class name of the object class"
+        },
+        {
+            "trigger": "perror",
+            "contents": "perror(${1:cErrorMessage})",
+            "kind": "function",
+            "annotation": "Print error message"
+        },
+        {
+            "trigger": "pointer2object",
+            "contents": "pointer2object(${1:Low Level Object})",
+            "kind": "function",
+            "annotation": "Convert Low Level Object to List|Object"
+        },
+        {
+            "trigger": "pointer2string",
+            "contents": "pointer2string(${1:pointer}, ${2:nStart}, ${3:nCount})",
+            "kind": "function",
+            "annotation": "Convert pointer to string"
+        },
+        {
+            "trigger": "pointercompare",
+            "contents": "pointercompare(${1:oObject1}, ${2:oObject2})",
+            "kind": "function",
+            "annotation": "Compare two pointers"
+        },
+        {
+            "trigger": "pow",
+            "contents": "pow(${1:x}, ${2:y})",
+            "kind": "function",
+            "annotation": "x raised to the power of y"
+        },
+        {
+            "trigger": "prevfilename",
+            "contents": "prevfilename()",
+            "kind": "function",
+            "annotation": "String contains the previous source file name"
+        },
+        {
+            "trigger": "print2str",
+            "contents": "print2str(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert print output to string"
+        },
+        {
+            "trigger": "ptr2obj",
+            "contents": "ptr2obj(${1:Low Level Object})",
+            "kind": "function",
+            "annotation": "Convert Low Level Object to List|Object"
+        },
+        {
+            "trigger": "ptr2str",
+            "contents": "ptr2str(${1:pointer}, ${2:nStart}, ${3:nCount})",
+            "kind": "function",
+            "annotation": "Convert pointer to string"
+        },
+        {
+            "trigger": "ptrcmp",
+            "contents": "ptrcmp(${1:oObject1}, ${2:oObject2})",
+            "kind": "function",
+            "annotation": "Compare two pointers"
+        },
+        {
+            "trigger": "puts",
+            "contents": "puts(${1:cString})",
+            "kind": "function",
+            "annotation": "Print string with new line"
+        },
+        {
+            "trigger": "raise",
+            "contents": "raise(${1:cErrorMessage})",
+            "kind": "function",
+            "annotation": "Raise an exception"
+        },
+        {
+            "trigger": "random",
+            "contents": "random(${1:x})",
+            "kind": "function",
+            "annotation": "Generate a random number in the range [0,x]"
+        },
+        {
+            "trigger": "randomize",
+            "contents": "randomize(${1:nNumber})",
+            "kind": "function",
+            "annotation": "Initialize random number generator"
+        },
+        {
+            "trigger": "read",
+            "contents": "read(${1:cFileName})",
+            "kind": "function",
+            "annotation": "Read file content"
+        },
+        {
+            "trigger": "ref",
+            "contents": "ref(${1:aList|oObject})",
+            "kind": "function",
+            "annotation": "Get List/Object reference"
+        },
+        {
+            "trigger": "reference",
+            "contents": "reference(${1:aList|oObject})",
+            "kind": "function",
+            "annotation": "Get List/Object reference"
+        },
+        {
+            "trigger": "refcount",
+            "contents": "refcount(${1:aList|oObject})",
+            "kind": "function",
+            "annotation": "Get References Count"
+        },
+        {
+            "trigger": "remove",
+            "contents": "remove(${1:cFileName})",
+            "kind": "function",
+            "annotation": "Delete file"
+        },
+        {
+            "trigger": "rename",
+            "contents": "rename(${1:cOldFileName}, ${2:cNewFileName})",
+            "kind": "function",
+            "annotation": "Rename file"
+        },
+        {
+            "trigger": "reverse",
+            "contents": "reverse(${1:List|String})",
+            "kind": "function",
+            "annotation": "Reverse List|String"
+        },
+        {
+            "trigger": "rewind",
+            "contents": "rewind(${1:FileHandle})",
+            "kind": "function",
+            "annotation": "Set the file position to the beginning of the file"
+        },
+        {
+            "trigger": "right",
+            "contents": "right(${1:cString}, ${2:count})",
+            "kind": "function",
+            "annotation": "Get characters starting from the right"
+        },
+        {
+            "trigger": "ring_give",
+            "contents": "ring_give(${1:cVariable})",
+            "kind": "function",
+            "annotation": "Get variable value"
+        },
+        {
+            "trigger": "ring_see",
+            "contents": "ring_see(${1:cMessage})",
+            "kind": "function",
+            "annotation": "Print message"
+        },
+        {
+            "trigger": "ring_state_delete",
+            "contents": "ring_state_delete(${1:oState})",
+            "kind": "function",
+            "annotation": "Delete Ring state"
+        },
+        {
+            "trigger": "ring_state_filetokens",
+            "contents": "ring_state_filetokens(${1:oState}, ${2:cRingFileName})",
+            "kind": "function",
+            "annotation": "Get file tokens"
+        },
+        {
+            "trigger": "ring_state_findvar",
+            "contents": "ring_state_findvar(${1:oState}, ${2:cVariableName})",
+            "kind": "function",
+            "annotation": "Find variable"
+        },
+        {
+            "trigger": "ring_state_init",
+            "contents": "ring_state_init()",
+            "kind": "function",
+            "annotation": "Initialize Ring state"
+        },
+        {
+            "trigger": "ring_state_main",
+            "contents": "ring_state_main(${1:cRingFileName})",
+            "kind": "function",
+            "annotation": "Run Ring program"
+        },
+        {
+            "trigger": "ring_state_mainfile",
+            "contents": "ring_state_mainfile(${1:oState}, ${2:cRingFileName|cRingoFileName})",
+            "kind": "function",
+            "annotation": "Run Ring program"
+        },
+        {
+            "trigger": "ring_state_new",
+            "contents": "ring_state_new()",
+            "kind": "function",
+            "annotation": "Create new Ring state"
+        },
+        {
+            "trigger": "ring_state_newvar",
+            "contents": "ring_state_newvar(${1:oState}, ${2:cVariableName})",
+            "kind": "function",
+            "annotation": "Create new variable"
+        },
+        {
+            "trigger": "ring_state_resume",
+            "contents": "ring_state_resume(${1:oState}${2:, ${3:cPara|nPara}}${4:, ${5:lUseReturn}})",
+            "kind": "function",
+            "annotation": "Resume Ring state"
+        },
+        {
+            "trigger": "ring_state_runcode",
+            "contents": "ring_state_runcode(${1:oState}, ${2:cCode})",
+            "kind": "function",
+            "annotation": "Run Ring code"
+        },
+        {
+            "trigger": "ring_state_runcodeatins",
+            "contents": "ring_state_runcodeatins(${1:oState}, ${2:nPC})",
+            "kind": "function",
+            "annotation": "Run Ring code at instruction"
+        },
+        {
+            "trigger": "ring_state_runfile",
+            "contents": "ring_state_runfile(${1:oState}, ${2:cRingFileName})",
+            "kind": "function",
+            "annotation": "Run Ring file"
+        },
+        {
+            "trigger": "ring_state_runobjectfile",
+            "contents": "ring_state_runobjectfile(${1:oState}, ${2:cRingObjectFileName})",
+            "kind": "function",
+            "annotation": "Run Ring object file"
+        },
+        {
+            "trigger": "ring_state_scannererror",
+            "contents": "ring_state_scannererror(${1:oState})",
+            "kind": "function",
+            "annotation": "Get scanner error"
+        },
+        {
+            "trigger": "ring_state_setvar",
+            "contents": "ring_state_setvar(${1:oState}, ${2:cVariableName}, ${3:Value})",
+            "kind": "function",
+            "annotation": "Set variable value"
+        },
+        {
+            "trigger": "ring_state_stringtokens",
+            "contents": "ring_state_stringtokens(${1:oState}, ${2:cRingFileName}${3:, ${4:lCaseSensitive}})",
+            "kind": "function",
+            "annotation": "Get string tokens"
+        },
+        {
+            "trigger": "ringvm_callfunc",
+            "contents": "ringvm_callfunc(${1:cFuncName})",
+            "kind": "function",
+            "annotation": "Call Ring function"
+        },
+        {
+            "trigger": "ringvm_calllist",
+            "contents": "ringvm_calllist()",
+            "kind": "function",
+            "annotation": "Get call list"
+        },
+        {
+            "trigger": "ringvm_cfunctionslist",
+            "contents": "ringvm_cfunctionslist()",
+            "kind": "function",
+            "annotation": "Get C functions list"
+        },
+        {
+            "trigger": "ringvm_classeslist",
+            "contents": "ringvm_classeslist()",
+            "kind": "function",
+            "annotation": "Get classes list"
+        },
+        {
+            "trigger": "ringvm_codelist",
+            "contents": "ringvm_codelist()",
+            "kind": "function",
+            "annotation": "Get code list"
+        },
+        {
+            "trigger": "ringvm_evalinscope",
+            "contents": "ringvm_evalinscope(${1:nScope}, ${2:cCode})",
+            "kind": "function",
+            "annotation": "Evaluate code in specific scope"
+        },
+        {
+            "trigger": "ringvm_fileslist",
+            "contents": "ringvm_fileslist()",
+            "kind": "function",
+            "annotation": "Get files list"
+        },
+        {
+            "trigger": "ringvm_functionslist",
+            "contents": "ringvm_functionslist()",
+            "kind": "function",
+            "annotation": "Get functions list"
+        },
+        {
+            "trigger": "ringvm_genarray",
+            "contents": "ringvm_genarray(${1:aList})",
+            "kind": "function",
+            "annotation": "Generate array"
+        },
+        {
+            "trigger": "ringvm_give",
+            "contents": "ringvm_give(${1:cVariableName})",
+            "kind": "function",
+            "annotation": "Get variable value"
+        },
+        {
+            "trigger": "ringvm_hideerrormsg",
+            "contents": "ringvm_hideerrormsg(${1:lStatus})",
+            "kind": "function",
+            "annotation": "Hide error message"
+        },
+        {
+            "trigger": "ringvm_info",
+            "contents": "ringvm_info()",
+            "kind": "function",
+            "annotation": "Get VM information"
+        },
+        {
+            "trigger": "ringvm_ismempool",
+            "contents": "ringvm_ismempool()",
+            "kind": "function",
+            "annotation": "Check if memory pool is used"
+        },
+        {
+            "trigger": "ringvm_memorylist",
+            "contents": "ringvm_memorylist()",
+            "kind": "function",
+            "annotation": "Get memory list"
+        },
+        {
+            "trigger": "ringvm_packageslist",
+            "contents": "ringvm_packageslist()",
+            "kind": "function",
+            "annotation": "Get packages list"
+        },
+        {
+            "trigger": "ringvm_passerror",
+            "contents": "ringvm_passerror()",
+            "kind": "function",
+            "annotation": "Pass error"
+        },
+        {
+            "trigger": "ringvm_runcode",
+            "contents": "ringvm_runcode(${1:cCode})",
+            "kind": "function",
+            "annotation": "Run Ring code"
+        },
+        {
+            "trigger": "ringvm_scopescount",
+            "contents": "ringvm_scopescount()",
+            "kind": "function",
+            "annotation": "Get scopes count"
+        },
+        {
+            "trigger": "ringvm_see",
+            "contents": "ringvm_see(${1:cMessage})",
+            "kind": "function",
+            "annotation": "Print message"
+        },
+        {
+            "trigger": "ringvm_settrace",
+            "contents": "ring_settrace(${1:cCode})",
+            "kind": "function",
+            "annotation": "Set trace function"
+        },
+        {
+            "trigger": "ringvm_tracedata",
+            "contents": "ringvm_tracedata()",
+            "kind": "function",
+            "annotation": "Get trace data"
+        },
+        {
+            "trigger": "ringvm_traceevent",
+            "contents": "ringvm_traceevent()",
+            "kind": "function",
+            "annotation": "Get trace event"
+        },
+        {
+            "trigger": "ringvm_tracefunc",
+            "contents": "ringvm_tracefunc()",
+            "kind": "function",
+            "annotation": "Get trace function"
+        },
+        {
+            "trigger": "round",
+            "contents": "round(${1:x})",
+            "kind": "function",
+            "annotation": "Round to the nearest integer"
+        },
+        {
+            "trigger": "scanf",
+            "contents": "scanf(${1:cFormatString})",
+            "kind": "function",
+            "annotation": "Read formatted input"
+        },
+        {
+            "trigger": "setattribute",
+            "contents": "setattribute(${1:oObject}, ${2:cAttributeName}, ${3:Value})",
+            "kind": "function",
+            "annotation": "Set attribute value"
+        },
+        {
+            "trigger": "setpointer",
+            "contents": "setpointer(${1:pointer}, ${2:nNewAddress})",
+            "kind": "function",
+            "annotation": "Set pointer address"
+        },
+        {
+            "trigger": "setptr",
+            "contents": "setptr(${1:pointer}, ${2:nNewAddress})",
+            "kind": "function",
+            "annotation": "Set pointer address"
+        },
+        {
+            "trigger": "shutdown",
+            "contents": "shutdown(${1:nStatus})",
+            "kind": "function",
+            "annotation": "Shutdown the application"
+        },
+        {
+            "trigger": "sin",
+            "contents": "sin(${1:x})",
+            "kind": "function",
+            "annotation": "The sine of an angle of x radians"
+        },
+        {
+            "trigger": "sinh",
+            "contents": "sinh(${1:x})",
+            "kind": "function",
+            "annotation": "The hyperbolic sine of x radians"
+        },
+        {
+            "trigger": "sort",
+            "contents": "sort(${1:List}${2:, ${3:nColumn}}${4:, ${5:cAttribute}})",
+            "kind": "function",
+            "annotation": "Sort list"
+        },
+        {
+            "trigger": "space",
+            "contents": "space(${1:nBytesCount})",
+            "kind": "function",
+            "annotation": "Create string with spaces"
+        },
+        {
+            "trigger": "sqrt",
+            "contents": "sqrt(${1:x})",
+            "kind": "function",
+            "annotation": "The square root of x"
+        },
+        {
+            "trigger": "srandom",
+            "contents": "srandom(${1:x})",
+            "kind": "function",
+            "annotation": "Initialize random number generator"
+        },
+        {
+            "trigger": "str2hex",
+            "contents": "str2hex(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert string to hexadecimal string"
+        },
+        {
+            "trigger": "str2hexcstyle",
+            "contents": "str2hexcstyle(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert string to hexadecimal string (C style)"
+        },
+        {
+            "trigger": "str2list",
+            "contents": "str2list(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert string to list"
+        },
+        {
+            "trigger": "strcmp",
+            "contents": "strcmp(${1:cString1}, ${2:cString2})",
+            "kind": "function",
+            "annotation": "Compare two strings"
+        },
+        {
+            "trigger": "string",
+            "contents": "string(${1:number})",
+            "kind": "function",
+            "annotation": "Convert number to string"
+        },
+        {
+            "trigger": "substr",
+            "contents": "substr(${1:cString}, ${2:substring|position}${3:, ${4:count|newsubstring}}${5:, ${6:1}})",
+            "kind": "function",
+            "annotation": "Get substring or transform string"
+        },
+        {
+            "trigger": "swap",
+            "contents": "swap(${1:aList}, ${2:nItem1}, ${3:nItem2})",
+            "kind": "function",
+            "annotation": "Swap two items in a list"
+        },
+        {
+            "trigger": "sysget",
+            "contents": "sysget(${1:cVariable})",
+            "kind": "function",
+            "annotation": "Get environment variable"
+        },
+        {
+            "trigger": "sysset",
+            "contents": "sysset(${1:cVariable}, ${2:cValue})",
+            "kind": "function",
+            "annotation": "Set environment variable"
+        },
+        {
+            "trigger": "syssleep",
+            "contents": "syssleep(${1:nMilliSecs})",
+            "kind": "function",
+            "annotation": "Sleep for milliseconds"
+        },
+        {
+            "trigger": "system",
+            "contents": "system(${1:cCommand})",
+            "kind": "function",
+            "annotation": "Execute system command"
+        },
+        {
+            "trigger": "sysunset",
+            "contents": "sysunset(${1:cVariable})",
+            "kind": "function",
+            "annotation": "Unset environment variable"
+        },
+        {
+            "trigger": "tan",
+            "contents": "tan(${1:x})",
+            "kind": "function",
+            "annotation": "Tangent of an angle of x radians"
+        },
+        {
+            "trigger": "tanh",
+            "contents": "tanh(${1:x})",
+            "kind": "function",
+            "annotation": "The hyperbolic tangent of x radians"
+        },
+        {
+            "trigger": "tempfile",
+            "contents": "tempfile()",
+            "kind": "function",
+            "annotation": "Create temporary file"
+        },
+        {
+            "trigger": "tempname",
+            "contents": "tempname()",
+            "kind": "function",
+            "annotation": "Generate temporary file name"
+        },
+        {
+            "trigger": "time",
+            "contents": "time()",
+            "kind": "function",
+            "annotation": "Get current time"
+        },
+        {
+            "trigger": "timelist",
+            "contents": "timelist()",
+            "kind": "function",
+            "annotation": "Get time list"
+        },
+        {
+            "trigger": "trim",
+            "contents": "trim(${1:cString})",
+            "kind": "function",
+            "annotation": "Remove spaces from right and left"
+        },
+        {
+            "trigger": "type",
+            "contents": "type(${1:value})",
+            "kind": "function",
+            "annotation": "Get variable type"
+        },
+        {
+            "trigger": "ungetc",
+            "contents": "ungetc(${1:FileHandle}, ${2:character})",
+            "kind": "function",
+            "annotation": "Push character back to stream"
+        },
+        {
+            "trigger": "unsigned",
+            "contents": "unsigned(${1:nNum1}, ${2:nNum2}, ${3:cOperator})",
+            "kind": "function",
+            "annotation": "Perform operation using unsigned numbers"
+        },
+        {
+            "trigger": "upper",
+            "contents": "upper(${1:cString})",
+            "kind": "function",
+            "annotation": "Convert string letters to UPPER case"
+        },
+        {
+            "trigger": "uptime",
+            "contents": "uptime()",
+            "kind": "function",
+            "annotation": "Get system uptime"
+        },
+        {
+            "trigger": "variablepointer",
+            "contents": "variablepointer(${1:cVariableName}, ${2:cPointerType})",
+            "kind": "function",
+            "annotation": "Get variable pointer"
+        },
+        {
+            "trigger": "varptr",
+            "contents": "varptr(${1:cVariableName}, ${2:cPointerType})",
+            "kind": "function",
+            "annotation": "Get variable pointer"
+        },
+        {
+            "trigger": "version",
+            "contents": "version(${1:[lPatch]})",
+            "kind": "function",
+            "annotation": "Get Ring version"
+        },
+        {
+            "trigger": "windowsnl",
+            "contents": "windowsnl()",
+            "kind": "function",
+            "annotation": "Get Windows new line"
+        },
+        {
+            "trigger": "write",
+            "contents": "write(${1:cFileName}, ${2:cString})",
+            "kind": "function",
+            "annotation": "Write to file"
+        }
     ]
 }
