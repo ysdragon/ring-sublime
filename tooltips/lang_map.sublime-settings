@@ -1,0 +1,12 @@
+{
+	"mdpopups.sublime_user_lang_map": {
+		"Ring": [
+			[
+				"ring"
+			],
+			[
+				"ring-sublime/syntaxes/ring"
+			]
+		]
+	}
+}

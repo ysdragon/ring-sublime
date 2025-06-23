@@ -1,0 +1,8 @@
+{
+    "cmd": ["ring", "$file"],
+    "selector": "source.ring", 
+    "file_regex": "^\\s*File\\s*:\\s*(.+)\\s*Line\\s*:\\s*([0-9]+)",
+    
+    // Enable/disable tooltips
+    "show_tooltips": true
+}

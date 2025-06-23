@@ -1,0 +1,35 @@
+Ring Language Support for Sublime Text
+=====================================
+
+Thank you for installing the Ring Language plugin for Sublime Text!
+
+🎉 What's included:
+   • Syntax highlighting for Ring language files (.ring, .rform, .rh)
+   • Interactive tooltips with function documentation
+   • Code completion and snippets
+   • Build system integration
+   • Quick access to Ring resources
+
+🚀 Getting Started:
+   1. Open any .ring file to see syntax highlighting
+   2. Hover over Ring functions to see interactive tooltips
+   3. Use Ctrl+B (Cmd+B on Mac) to run Ring files
+   4. Access Ring tools via Tools > Ring menu
+
+⚙️  Configuration:
+   • Go to Preferences > Package Settings > Ring to customize settings
+   • Toggle tooltips via Tools > Ring > Toggle Tooltips
+   • Adjust tooltip behavior and appearance in settings
+
+📚 Resources:
+   • Ring Website: https://ring-lang.net/
+   • Documentation: https://ring-lang.net/doc1.22/
+   • Community: https://groups.google.com/g/ring-lang
+
+💡 Tips:
+   • Tooltips appear when you hover over Ring keywords and functions
+   • Use the "copy" button in tooltips to copy examples to clipboard
+
+
+For support or issues, visit: https://github.com/ysdragon/ring-sublime
+

@@ -4,8 +4,12 @@ This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Subl
 
 ## Features
 
-- Support for keywords, comments, strings, etc.
-- Support for keyword and function completions.
+- **Syntax Highlighting**: Complete support for Ring keywords, comments, strings, numbers, and operators
+- **Interactive Tooltips**: Hover over Ring functions to see documentation, syntax, and examples
+- **Code Completion**: Intelligent keyword and function completions
+- **Build System Integration**: Run Ring files directly from Sublime Text (Ctrl+B/Cmd+B)
+- **Menu Integration**: Access Ring tools via Tools > Ring menu
+- **Settings Management**: Easy access to plugin settings via Preferences menu
 
 ## Installation
 
@@ -30,6 +34,13 @@ Once installed, Sublime Text should automatically detect `.ring`, `.rform` and `
 
 1. Opening a `.ring` file.
 2. Going to `View` > `Syntax` > `Open all with current extension as...` > `Ring`.
+
+### Interactive Features
+
+- **Tooltips**: Hover over Ring functions and keywords to see interactive documentation with examples
+- **Menu Access**: Use `Tools > Ring` to access plugin features like running files, toggling tooltips, and opening Ring resources
+- **Settings**: Configure the plugin via `Preferences > Package Settings > Ring`
+- **Quick Build**: Press `Ctrl+B` (Windows/Linux) or `Cmd+B` (macOS) to run Ring files directly
 
 ## Screenshots
 

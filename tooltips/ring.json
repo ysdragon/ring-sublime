@@ -1,0 +1,1658 @@
+{
+    "see": {
+        "syntax": "see cString",
+        "description": "Print to console",
+        "example": "see \"Hello World\"",
+        "class": ["function"]
+    },
+    "put": {
+        "syntax": "put cString",
+        "description": "Print to console",
+        "example": "put \"Hello World\"",
+        "class": ["function"]
+    },
+    "print": {
+        "syntax": "print(cString)",
+        "description": "Print to console",
+        "example": "print(\"Hello World\")",
+        "class": ["function"]
+    },
+    "func": {
+        "syntax": "func functionName",
+        "description": "Define a function",
+        "example": "func sayHello()\n    see \"Hello World\"\nreturn",
+        "class": ["snippet"]
+    },
+    "def": {
+        "syntax": "def functionName",
+        "description": "Define a function",
+        "example": "def sum(x,y)\n    return x + y",
+        "class": ["snippet"]
+    },
+    "if": {
+        "syntax": "if condition",
+        "description": "if Statement",
+        "example": "if x > 0\n    see \"Positive\"\nok",
+        "class": ["snippet"]
+    },
+    "for": {
+        "syntax": "for i = 1 to 10",
+        "description": "For loop",
+        "example": "for i = 1 to 10\n    see i\nnext\n\nmyList = [1,2,3]\nfor i in myList\n    see i\nnext",
+        "class": ["snippet"]
+    },
+    "foreach": {
+        "syntax": "foreach i in myList",
+        "description": "Foreach-in loop",
+        "example": "myList = [1,2,3]\nforeach i in myList\n    see i\nnext",
+        "class": ["snippet"]
+    },
+    "while": {
+        "syntax": "while condition",
+        "description": "While loop",
+        "example": "x = 1\nwhile x <= 10\n    see x\n    x++\nend",
+        "class": ["snippet"]
+    },
+    "switch": {
+        "syntax": "switch expression",
+        "description": "Switch statement",
+        "example": "x = 1 \n\nswitch x\ncase 1\n    see \"One\"\ncase 2\n    see \"Two\"\nend",
+        "class": ["snippet"]
+    },
+    "try": {
+        "syntax": "try",
+        "description": "Try-Catch block",
+        "example": "try\n    see 1/0\ncatch\n    see \"Error\"\nend",
+        "class": ["snippet"]
+    },
+    "class": {
+        "syntax": "class ClassName",
+        "description": "Define a class",
+        "example": "class Point\n    x=0 y=0\n    func init(x,y)\n        self.x = x\n        self.y = y",
+        "class": ["snippet"]
+    },
+    "load": {
+        "syntax": "load \"filename.ring\"",
+        "description": "Load a Ring file/package",
+        "example": "load \"mylib.ring\"",
+        "class": ["function"]
+    },
+    "loadlib": {
+        "syntax": "loadlib(\"library\")",
+        "description": "Load a dynamic library",
+        "example": "loadlib(\"mylib.so\")",
+        "class": ["function"]
+    },
+    "package": {
+        "syntax": "package PackageName",
+        "description": "Define a package",
+        "example": "package MyPackage\n    class MyClass\n        func myMethod()\n            see \"Hello\"\nreturn",
+        "class": ["snippet"]
+    },
+    "import": {
+        "syntax": "import PackageName",
+        "description": "Import a package",
+        "example": "import MyPackage",
+        "class": ["snippet"]
+    },
+    "changeringkeyword": {
+        "syntax": "changeringkeyword OldKeyword NewKeyword",
+        "description": "Modify Ring language keywords",
+        "example": "changeringkeyword \"old\" \"new\"",
+        "class": ["function"]
+    },
+    "changeringoperator": {
+        "syntax": "changeringoperator OldOperator NewOperator",
+        "description": "Modify Ring language operators",
+        "example": "changeringoperator \"+\" \"add\"",
+        "class": ["function"]
+    },
+    "enablehashcomments": {
+        "syntax": "enablehashcomments",
+        "description": "Enable '#' for single-line comments",
+        "example": "enablehashcomments",
+        "class": ["function"]
+    },
+    "disablehashcomments": {
+        "syntax": "disablehashcomments",
+        "description": "Disable '#' for single-line comments",
+        "example": "disablehashcomments",
+        "class": ["function"]
+    },
+    "loadsyntax": {
+        "syntax": "loadsyntax \"syntax_rules_filename\"",
+        "description": "Load custom syntax rules from a file",
+        "example": "loadsyntax \"rules.txt\"",
+        "class": ["function"]
+    },
+    "acos": {
+        "syntax": "acos(x)",
+        "description": "The principal value of the arc cosine of x",
+        "example": "see acos(0.5)  # Returns 1.0472",
+        "class": ["function"]
+    },
+    "add": {
+        "syntax": "add(List, Item)",
+        "description": "Add item to list",
+        "example": "list = [1,2,3]\nadd(list, 4)\nsee list  # Prints [1,2,3,4]",
+        "class": ["function"]
+    },
+    "addattribute": {
+        "syntax": "addattribute(Object, cAttributeName|aAttributesList)",
+        "description": "Add attribute to object",
+        "example": "addattribute(myObject, \"newAttribute\")",
+        "class": ["function"]
+    },
+    "adddays": {
+        "syntax": "adddays(cDate, nDays)",
+        "description": "Date from cDate and after nDays",
+        "example": "see adddays(\"01/01/2023\", 10)  # Returns \"11/01/2023\"",
+        "class": ["function"]
+    },
+    "addmethod": {
+        "syntax": "addmethod(Object, cNewMethodName, cMethodName|AnonymousFunction)",
+        "description": "Add method to object",
+        "example": "addmethod(myObject, \"newMethod\", func() see \"Hello\")",
+        "class": ["function"]
+    },
+    "ascii": {
+        "syntax": "ascii(character)",
+        "description": "ASCII Code",
+        "example": "see ascii(\"A\")  # Returns 65",
+        "class": ["function"]
+    },
+    "asin": {
+        "syntax": "asin(x)",
+        "description": "The principal value of the arc sine of x",
+        "example": "see asin(0.5)  # Returns 0.5236",
+        "class": ["function"]
+    },
+    "assert": {
+        "syntax": "assert(condition)",
+        "description": "Assert condition",
+        "example": "assert(x > 0)",
+        "class": ["function"]
+    },
+    "atan": {
+        "syntax": "atan(x)",
+        "description": "The principal value of the arc tangent of x",
+        "example": "see atan(1)  # Returns 0.7854",
+        "class": ["function"]
+    },
+    "atan2": {
+        "syntax": "atan2(y, x)",
+        "description": "The principal arc tangent of y/x",
+        "example": "see atan2(1, 1)  # Returns 0.7854",
+        "class": ["function"]
+    },
+    "attributes": {
+        "syntax": "attributes(object)",
+        "description": "Returns a list contains the object attributes",
+        "example": "see attributes(myObject)",
+        "class": ["function"]
+    },
+    "binarysearch": {
+        "syntax": "binarysearch(List, ItemValue, nColumn)",
+        "description": "Search in list, returns the Item Index",
+        "example": "index = binarysearch(myList, \"value\", 1)\nsee index",
+        "class": ["function"]
+    },
+    "bytes2double": {
+        "syntax": "bytes2double(cBytes)",
+        "description": "Convert bytes to double",
+        "example": "see bytes2double(\"\\x40\\x09\\x21\\xfb\\x54\\x44\\x2d\\x18\")",
+        "class": ["function"]
+    },
+    "bytes2float": {
+        "syntax": "bytes2float(cBytes)",
+        "description": "Convert bytes to float",
+        "example": "see bytes2float(\"\\x40\\x49\\x0f\\xdb\")",
+        "class": ["function"]
+    },
+    "bytes2int": {
+        "syntax": "bytes2int(cBytes)",
+        "description": "Convert bytes to int",
+        "example": "see bytes2int(\"\\x00\\x00\\x00\\x01\")",
+        "class": ["function"]
+    },
+    "callgarbagecollector": {
+        "syntax": "callgarbagecollector()",
+        "description": "Call garbage collector",
+        "example": "callgarbagecollector()",
+        "class": ["function"]
+    },
+    "callgc": {
+        "syntax": "callgc()",
+        "description": "Call garbage collector",
+        "example": "callgc()",
+        "class": ["function"]
+    },
+    "ceil": {
+        "syntax": "ceil(x)",
+        "description": "The smallest integer value",
+        "example": "see ceil(4.2)  # Returns 5",
+        "class": ["function"]
+    },
+    "cfunctions": {
+        "syntax": "cfunctions()",
+        "description": "A list contains functions names",
+        "example": "see cfunctions()",
+        "class": ["function"]
+    },
+    "char": {
+        "syntax": "char(ASCII Code)",
+        "description": "Convert ASCII Code to character",
+        "example": "see char(65)  # Returns \"A\"",
+        "class": ["function"]
+    },
+    "chdir": {
+        "syntax": "chdir(cNewPath)",
+        "description": "Change the current directory",
+        "example": "chdir(\"/new/path\")",
+        "class": ["function"]
+    },
+    "checkoverflow": {
+        "syntax": "checkoverflow(lFlag)",
+        "description": "Check overflow",
+        "example": "checkoverflow(true)",
+        "class": ["function"]
+    },
+    "classes": {
+        "syntax": "classes()",
+        "description": "A list contains classes names",
+        "example": "see classes()",
+        "class": ["function"]
+    },
+    "classname": {
+        "syntax": "classname(object)",
+        "description": "Returns the object class name",
+        "example": "see classname(myObject)",
+        "class": ["function"]
+    },
+    "clearerr": {
+        "syntax": "clearerr(FileHandle)",
+        "description": "Clear error indicator for file",
+        "example": "clearerr(myFile)",
+        "class": ["function"]
+    },
+    "clock": {
+        "syntax": "clock()",
+        "description": "The number of clock ticks from program start",
+        "example": "see clock()",
+        "class": ["function"]
+    },
+    "clockspersecond": {
+        "syntax": "clockspersecond()",
+        "description": "Number of clocks in one second",
+        "example": "see clockspersecond()",
+        "class": ["function"]
+    },
+    "closelib": {
+        "syntax": "closelib(pDLL)",
+        "description": "Close dynamic library",
+        "example": "closelib(myLibrary)",
+        "class": ["function"]
+    },
+    "copy": {
+        "syntax": "copy(\"cString\", nCount)",
+        "description": "String replicated nCount times",
+        "example": "see copy(\"A\", 5)  # Returns \"AAAAA\"",
+        "class": ["function"]
+    },
+    "cos": {
+        "syntax": "cos(x)",
+        "description": "The cosine of an angle of x radians",
+        "example": "see cos(0)  # Returns 1",
+        "class": ["function"]
+    },
+    "cosh": {
+        "syntax": "cosh(x)",
+        "description": "The hyperbolic cosine of x radians",
+        "example": "see cosh(0)  # Returns 1",
+        "class": ["function"]
+    },
+    "currentdir": {
+        "syntax": "currentdir()",
+        "description": "String contains the path of the current directory",
+        "example": "see currentdir()",
+        "class": ["function"]
+    },
+    "date": {
+        "syntax": "date()",
+        "description": "String represent the date \"dd/mm/yyyy\"",
+        "example": "see date()",
+        "class": ["function"]
+    },
+    "dec": {
+        "syntax": "dec(hexadecimal)",
+        "description": "Convert hexadecimal to decimal",
+        "example": "see dec(\"FF\")  # Returns 255",
+        "class": ["function"]
+    },
+    "decimals": {
+        "syntax": "decimals(n)",
+        "description": "Determine the decimals digits after the point",
+        "example": "see decimals(3.14159)  # Returns 5",
+        "class": ["function"]
+    },
+    "del": {
+        "syntax": "del(list, index)",
+        "description": "Delete item from list",
+        "example": "del(myList, 2)",
+        "class": ["function"]
+    },
+    "diffdays": {
+        "syntax": "diffdays(cDate1, cDate2)",
+        "description": "Number of days (Date1 - Date2)",
+        "example": "see diffdays(\"01/01/2023\", \"10/01/2023\")  # Returns 9",
+        "class": ["function"]
+    },
+    "dir": {
+        "syntax": "dir(cFolderPath)",
+        "description": "List contains files & sub folders",
+        "example": "see dir(\"/path\")",
+        "class": ["function"]
+    },
+    "direxists": {
+        "syntax": "direxists(cDirPath)",
+        "description": "Check if the directory exists",
+        "example": "see direxists(\"/path\")",
+        "class": ["function"]
+    },
+    "double2bytes": {
+        "syntax": "double2bytes(nNumber)",
+        "description": "Convert double to bytes",
+        "example": "see double2bytes(3.14)",
+        "class": ["function"]
+    },
+    "eval": {
+        "syntax": "eval(cCode)",
+        "description": "Evaluate code",
+        "example": "eval(\"see 1+1\")",
+        "class": ["function"]
+    },
+    "exefilename": {
+        "syntax": "exefilename()",
+        "description": "String contains the Ring executable file name",
+        "example": "see exefilename()",
+        "class": ["function"]
+    },
+    "exefolder": {
+        "syntax": "exefolder()",
+        "description": "String contains the Ring executable path",
+        "example": "see exefolder()",
+        "class": ["function"]
+    },
+    "exp": {
+        "syntax": "exp(x)",
+        "description": "The value of e raised to the xth power",
+        "example": "see exp(1)  # Returns 2.7182",
+        "class": ["function"]
+    },
+    "fabs": {
+        "syntax": "fabs(x)",
+        "description": "The absolute value of x",
+        "example": "see fabs(-5)  # Returns 5",
+        "class": ["function"]
+    },
+    "fclose": {
+        "syntax": "fclose(FileHandle)",
+        "description": "Close file stream",
+        "example": "fclose(myFile)",
+        "class": ["function"]
+    },
+    "feof": {
+        "syntax": "feof(FileHandle)",
+        "description": "Check if it's the EOF",
+        "example": "see feof(myFile)",
+        "class": ["function"]
+    },
+    "ferror": {
+        "syntax": "ferror(FileHandle)",
+        "description": "Check for file stream error",
+        "example": "see ferror(myFile)",
+        "class": ["function"]
+    },
+    "fexists": {
+        "syntax": "fexists(cFileName)",
+        "description": "Check if the file exists",
+        "example": "see fexists(\"file.txt\")",
+        "class": ["function"]
+    },
+    "fflush": {
+        "syntax": "fflush(FileHandle)",
+        "description": "Flush file buffer",
+        "example": "fflush(myFile)",
+        "class": ["function"]
+    },
+    "fgetc": {
+        "syntax": "fgetc(FileHandle)",
+        "description": "Returns character or EOF",
+        "example": "see fgetc(myFile)",
+        "class": ["function"]
+    },
+    "fgetpos": {
+        "syntax": "fgetpos(FileHandle)",
+        "description": "Position handle",
+        "example": "see fgetpos(myFile)",
+        "class": ["function"]
+    },
+    "fgets": {
+        "syntax": "fgets(FileHandle, nSize)",
+        "description": "Read new line from the stream",
+        "example": "see fgets(myFile, 100)",
+        "class": ["function"]
+    },
+    "filename": {
+        "syntax": "filename()",
+        "description": "String contains the active source file name",
+        "example": "see filename()",
+        "class": ["function"]
+    },
+    "find": {
+        "syntax": "find(List, ItemValue, nColumn, cAttribute)",
+        "description": "Find item in list",
+        "example": "index = find(myList, \"value\", 1, \"attribute\")\nsee index",
+        "class": ["function"]
+    },
+    "float2bytes": {
+        "syntax": "float2bytes(nNumber)",
+        "description": "Convert float to bytes",
+        "example": "see float2bytes(3.14)",
+        "class": ["function"]
+    },
+    "floor": {
+        "syntax": "floor(x)",
+        "description": "The largest integer value",
+        "example": "see floor(4.7)  # Returns 4",
+        "class": ["function"]
+    },
+    "fopen": {
+        "syntax": "fopen(cFileName, cMode)",
+        "description": "Open file",
+        "example": "myFile = fopen(\"file.txt\", \"r\")",
+        "class": ["function"]
+    },
+    "fputc": {
+        "syntax": "fputc(FileHandle, cChar)",
+        "description": "Write character to file",
+        "example": "fputc(myFile, \"A\")",
+        "class": ["function"]
+    },
+    "fputs": {
+        "syntax": "fputs(FileHandle, cString)",
+        "description": "Write string to file",
+        "example": "fputs(myFile, \"Hello World\")",
+        "class": ["function"]
+    },
+    "fread": {
+        "syntax": "fread(FileHandle, nSize)",
+        "description": "Read from file",
+        "example": "see fread(myFile, 100)",
+        "class": ["function"]
+    },
+    "freopen": {
+        "syntax": "freopen(cFileName, cMode, FileHandle)",
+        "description": "Reopen file",
+        "example": "freopen(\"file.txt\", \"w\", myFile)",
+        "class": ["function"]
+    },
+    "fseek": {
+        "syntax": "fseek(FileHandle, nOffset, nWhence)",
+        "description": "Set the file position",
+        "example": "fseek(myFile, 0, 0)",
+        "class": ["function"]
+    },
+    "fsetpos": {
+        "syntax": "fsetpos(FileHandle, PositionHandle)",
+        "description": "Set the file position",
+        "example": "fsetpos(myFile, myPosition)",
+        "class": ["function"]
+    },
+    "ftell": {
+        "syntax": "ftell(FileHandle)",
+        "description": "Get file position",
+        "example": "see ftell(myFile)",
+        "class": ["function"]
+    },
+    "functions": {
+        "syntax": "functions()",
+        "description": "A list contains functions names",
+        "example": "see functions()",
+        "class": ["function"]
+    },
+    "fwrite": {
+        "syntax": "fwrite(FileHandle, cString)",
+        "description": "Write to file",
+        "example": "fwrite(myFile, \"Hello World\")",
+        "class": ["function"]
+    },
+    "getarch": {
+        "syntax": "getarch()",
+        "description": "The name of the architecture of the Ring executable",
+        "example": "see getarch()",
+        "class": ["function"]
+    },
+    "getattribute": {
+        "syntax": "getattribute(oObject, cAttributeName)",
+        "description": "Get attribute value",
+        "example": "see getattribute(myObject, \"attribute\")",
+        "class": ["function"]
+    },
+    "getchar": {
+        "syntax": "getchar()",
+        "description": "Get character from standard input",
+        "example": "see getchar()",
+        "class": ["function"]
+    },
+    "getfilesize": {
+        "syntax": "getfilesize(cFilePath)",
+        "description": "Get file size",
+        "example": "see getfilesize(\"file.txt\")",
+        "class": ["function"]
+    },
+    "getnumber": {
+        "syntax": "getnumber()",
+        "description": "Get number from standard  input",
+        "example": "see getnumber()",
+        "class": ["function"]
+    },
+    "getpathtype": {
+        "syntax": "getpathtype(cPath)",
+        "description": "Get path type",
+        "example": "see getpathtype(\"/path\")",
+        "class": ["function"]
+    },
+    "getpointer": {
+        "syntax": "getpointer(pointer)",
+        "description": "Get pointer address",
+        "example": "see getpointer(myPointer)",
+        "class": ["function"]
+    },
+    "getptr": {
+        "syntax": "getptr(pointer)",
+        "description": "Get pointer address",
+        "example": "see getptr(myPointer)",
+        "class": ["function"]
+    },
+    "getstring": {
+        "syntax": "getstring()",
+        "description": "Get string from standard input",
+        "example": "see getstring()",
+        "class": ["function"]
+    },
+    "globals": {
+        "syntax": "globals()",
+        "description": "A list contains variables names in the global scope",
+        "example": "see globals()",
+        "class": ["function"]
+    },
+    "hex": {
+        "syntax": "hex(decimal)",
+        "description": "Convert decimal to hexadecimal",
+        "example": "see hex(255)  # Returns \"FF\"",
+        "class": ["function"]
+    },
+    "hex2str": {
+        "syntax": "hex2str(\"Hexadecimal string\")",
+        "description": "Convert hexadecimal string to string",
+        "example": "see hex2str(\"48656c6c6f\")  # Returns \"Hello\"",
+        "class": ["function"]
+    },
+    "importpackage": {
+        "syntax": "importpackage(cPackageName)",
+        "description": "Import package",
+        "example": "importpackage(\"MyPackage\")",
+        "class": ["function"]
+    },
+    "input": {
+        "syntax": "input(nCount)",
+        "description": "Get input from standard input",
+        "example": "see input(5)",
+        "class": ["function"]
+    },
+    "insert": {
+        "syntax": "insert(List, Index, Item)",
+        "description": "Insert item into list",
+        "example": "insert(myList, 2, \"newItem\")",
+        "class": ["function"]
+    },
+    "int2bytes": {
+        "syntax": "int2bytes(nNumber)",
+        "description": "Convert int to bytes",
+        "example": "see int2bytes(1)",
+        "class": ["function"]
+    },
+    "intvalue": {
+        "syntax": "intvalue(cVariableName)",
+        "description": "Get integer value of variable",
+        "example": "see intvalue(\"myVariable\")",
+        "class": ["function"]
+    },
+    "isalnum": {
+        "syntax": "isalnum(value)",
+        "description": "Check if the value is digit/letter",
+        "example": "see isalnum(\"A\")",
+        "class": ["function"]
+    },
+    "isalpha": {
+        "syntax": "isalpha(value)",
+        "description": "Check if the value is a letter",
+        "example": "see isalpha(\"A\")",
+        "class": ["function"]
+    },
+    "isandroid": {
+        "syntax": "isandroid()",
+        "description": "Check if the operating system is Android",
+        "example": "see isandroid()",
+        "class": ["function"]
+    },
+    "isattribute": {
+        "syntax": "isattribute(object, cAttributeName)",
+        "description": "Check if attribute exists",
+        "example": "see isattribute(myObject, \"attribute\")",
+        "class": ["function"]
+    },
+    "iscfunction": {
+        "syntax": "iscfunction(cFunctionName)",
+        "description": "Check if the C function is defined",
+        "example": "see iscfunction(\"myFunction\")",
+        "class": ["function"]
+    },
+    "isclass": {
+        "syntax": "isclass(cClassName)",
+        "description": "Check if the Class is defined",
+        "example": "see isclass(\"MyClass\")",
+        "class": ["function"]
+    },
+    "iscntrl": {
+        "syntax": "iscntrl(value)",
+        "description": "Check if value is a control character",
+        "example": "see iscntrl(\"\\n\")",
+        "class": ["function"]
+    },
+    "isdigit": {
+        "syntax": "isdigit(value)",
+        "description": "Check if value is a digit",
+        "example": "see isdigit(\"5\")",
+        "class": ["function"]
+    },
+    "isfreebsd": {
+        "syntax": "isfreebsd()",
+        "description": "Check if the operating system is FreeBSD",
+        "example": "see isfreebsd()",
+        "class": ["function"]
+    },
+    "isfunction": {
+        "syntax": "isfunction(cFunctionName)",
+        "description": "Check if the Ring function is defined",
+        "example": "see isfunction(\"myFunction\")",
+        "class": ["function"]
+    },
+    "isglobal": {
+        "syntax": "isglobal(cVariableName)",
+        "description": "Check if the variable is defined in the global scope",
+        "example": "see isglobal(\"myVariable\")",
+        "class": ["function"]
+    },
+    "isgraph": {
+        "syntax": "isgraph(value)",
+        "description": "Check if value can be printed (Except space)",
+        "example": "see isgraph(\"A\")",
+        "class": ["function"]
+    },
+    "islinux": {
+        "syntax": "islinux()",
+        "description": "Check if the operating system is Linux",
+        "example": "see islinux()",
+        "class": ["function"]
+    },
+    "islist": {
+        "syntax": "islist(value)",
+        "description": "Check if the value is a list",
+        "example": "see islist(myList)",
+        "class": ["function"]
+    },
+    "islocal": {
+        "syntax": "islocal(cVariableName)",
+        "description": "Check if the variable is defined in the local scope",
+        "example": "see islocal(\"myVariable\")",
+        "class": ["function"]
+    },
+    "islower": {
+        "syntax": "islower(value)",
+        "description": "Check if the value is lowercase letter",
+        "example": "see islower(\"a\")",
+        "class": ["function"]
+    },
+    "ismacosx": {
+        "syntax": "ismacosx()",
+        "description": "Check if the operating system is macOS",
+        "example": "see ismacosx()",
+        "class": ["function"]
+    },
+    "ismethod": {
+        "syntax": "ismethod(object, cMethodName)",
+        "description": "Check if the object class contains the method",
+        "example": "see ismethod(myObject, \"myMethod\")",
+        "class": ["function"]
+    },
+    "ismsdos": {
+        "syntax": "ismsdos()",
+        "description": "Check if the operating system is MS-DOS",
+        "example": "see ismsdos()",
+        "class": ["function"]
+    },
+    "isnull": {
+        "syntax": "isnull(value)",
+        "description": "Check if the value is NULL",
+        "example": "see isnull(myValue)",
+        "class": ["function"]
+    },
+    "isnumber": {
+        "syntax": "isnumber(value)",
+        "description": "Check if the value is a number",
+        "example": "see isnumber(123)",
+        "class": ["function"]
+    },
+    "isobject": {
+        "syntax": "isobject(variable)",
+        "description": "Check if it's an object",
+        "example": "see isobject(myObject)",
+        "class": ["function"]
+    },
+    "ispackage": {
+        "syntax": "ispackage(cPackageName)",
+        "description": "Check if the Package is defined",
+        "example": "see ispackage(\"MyPackage\")",
+        "class": ["function"]
+    },
+    "ispackageclass": {
+        "syntax": "ispackageclass(cPackageName, cClassName)",
+        "description": "Check if the Class is defined in the package",
+        "example": "see ispackageclass(\"MyPackage\", \"MyClass\")",
+        "class": ["function"]
+    },
+    "ispointer": {
+        "syntax": "ispointer(vPara)",
+        "description": "Check if the value is a pointer",
+        "example": "see ispointer(myPointer)",
+        "class": ["function"]
+    },
+    "isprint": {
+        "syntax": "isprint(value)",
+        "description": "Check if value can be printed",
+        "example": "see isprint(\"A\")",
+        "class": ["function"]
+    },
+    "isprivateattribute": {
+        "syntax": "isprivateattribute(object, cAttributeName)",
+        "description": "Check if the attribute is private",
+        "example": "see isprivateattribute(myObject, \"attribute\")",
+        "class": ["function"]
+    },
+    "isprivatemethod": {
+        "syntax": "isprivatemethod(object, cMethodName)",
+        "description": "Check if the method is private",
+        "example": "see isprivatemethod(myObject, \"method\")",
+        "class": ["function"]
+    },
+    "ispunct": {
+        "syntax": "ispunct(value)",
+        "description": "Check if value is a punctuation character",
+        "example": "see ispunct(\"!\")",
+        "class": ["function"]
+    },
+    "isspace": {
+        "syntax": "isspace(value)",
+        "description": "Check if value is a white-space",
+        "example": "see isspace(\" \")",
+        "class": ["function"]
+    },
+    "isstring": {
+        "syntax": "isstring(value)",
+        "description": "Check if the value is a string",
+        "example": "see isstring(\"Hello\")",
+        "class": ["function"]
+    },
+    "isunix": {
+        "syntax": "isunix()",
+        "description": "Check if the operating system is Unix-like",
+        "example": "see isunix()",
+        "class": ["function"]
+    },
+    "isupper": {
+        "syntax": "isupper(value)",
+        "description": "Check if the value is uppercase letter",
+        "example": "see isupper(\"A\")",
+        "class": ["function"]
+    },
+    "iswindows": {
+        "syntax": "iswindows()",
+        "description": "Check if the operating system is Windows",
+        "example": "see iswindows()",
+        "class": ["function"]
+    },
+    "iswindows64": {
+        "syntax": "iswindows64()",
+        "description": "Check if the operating system is Windows 64bit",
+        "example": "see iswindows64()",
+        "class": ["function"]
+    },
+    "isxdigit": {
+        "syntax": "isxdigit(value)",
+        "description": "Check if value is a hexadecimal digit",
+        "example": "see isxdigit(\"F\")",
+        "class": ["function"]
+    },
+    "left": {
+        "syntax": "left(cString, count)",
+        "description": "Get characters starting from the left",
+        "example": "see left(\"Hello\", 2)  # Returns \"He\"",
+        "class": ["function"]
+    },
+    "len": {
+        "syntax": "len(string|List)",
+        "description": "Get length of string or list",
+        "example": "see len(\"Hello\")  # Returns 5",
+        "class": ["function"]
+    },
+    "lines": {
+        "syntax": "lines(cString)",
+        "description": "Number of lines inside the string",
+        "example": "see lines(\"Hello\\nWorld\")  # Returns 2",
+        "class": ["function"]
+    },
+    "list": {
+        "syntax": "list(nSize)",
+        "description": "Create a new list",
+        "example": "myList = list(5)\nsee myList",
+        "class": ["function"]
+    },
+    "list2str": {
+        "syntax": "list2str(list)",
+        "description": "Convert list to string",
+        "example": "see list2str([\"A\", \"B\", \"C\"])  # Returns \"ABC\"",
+        "class": ["function"]
+    },
+    "locals": {
+        "syntax": "locals()",
+        "description": "A list contains variables names in the current scope",
+        "example": "see locals()",
+        "class": ["function"]
+    },
+    "log": {
+        "syntax": "log(x, b)",
+        "description": "The natural logarithm of x (the base of e)",
+        "example": "see log(10, 2)  # Returns 3.3219",
+        "class": ["function"]
+    },
+    "log10": {
+        "syntax": "log10(x)",
+        "description": "The common logarithm (base-10 logarithm) of x",
+        "example": "see log10(100)  # Returns 2",
+        "class": ["function"]
+    },
+    "lower": {
+        "syntax": "lower(cString)",
+        "description": "Convert string letters to lower case",
+        "example": "see lower(\"HELLO\")  # Returns \"hello\"",
+        "class": ["function"]
+    },
+    "max": {
+        "syntax": "max(nNumber1, nNumber2)",
+        "description": "Maximum number",
+        "example": "see max(5, 10)  # Returns 10",
+        "class": ["function"]
+    },
+    "memcpy": {
+        "syntax": "memcpy(pDestinationPointer, cSourceString, nSize)",
+        "description": "Copy memory",
+        "example": "memcpy(destPointer, \"source\", 6)",
+        "class": ["function"]
+    },
+    "memorycopy": {
+        "syntax": "memorycopy(pDestinationPointer, cSourceString, nSize)",
+        "description": "Copy memory",
+        "example": "memorycopy(destPointer, \"source\", 6)",
+        "class": ["function"]
+    },
+    "mergemethods": {
+        "syntax": "mergemethods(cClassNameDestination, cClassNameSource)",
+        "description": "Merge methods from one class to another",
+        "example": "mergemethods(\"ClassA\", \"ClassB\")",
+        "class": ["function"]
+    },
+    "methods": {
+        "syntax": "methods(object)",
+        "description": "Returns a list contains the object methods",
+        "example": "see methods(myObject)",
+        "class": ["function"]
+    },
+    "min": {
+        "syntax": "min(nNumber1, nNumber2)",
+        "description": "Minimum number",
+        "example": "see min(5, 10)  # Returns 5",
+        "class": ["function"]
+    },
+    "murmur3hash": {
+        "syntax": "murmur3hash(cString, nNumber)",
+        "description": "Calculate MurmurHash3 hash",
+        "example": "see murmur3hash(\"Hello\", 123)",
+        "class": ["function"]
+    },
+    "newlist": {
+        "syntax": "newlist(nSize)",
+        "description": "Create a new list",
+        "example": "myList = newlist(5)\nsee myList",
+        "class": ["function"]
+    },
+    "nofprocessors": {
+        "syntax": "nofprocessors()",
+        "description": "Get number of processors",
+        "example": "see nofprocessors()",
+        "class": ["function"]
+    },
+    "nothing": {
+        "syntax": "nothing(Any number/type of parameters)",
+        "description": "Return Zero (0)",
+        "example": "see nothing()",
+        "class": ["function"]
+    },
+    "nullpointer": {
+        "syntax": "nullpointer()",
+        "description": "Get NULL pointer",
+        "example": "see nullpointer()",
+        "class": ["function"]
+    },
+    "nullptr": {
+        "syntax": "nullptr()",
+        "description": "Get NULL pointer",
+        "example": "see nullptr()",
+        "class": ["function"]
+    },
+    "number": {
+        "syntax": "number(cString)",
+        "description": "Convert string to number",
+        "example": "see number(\"123\")  # Returns 123",
+        "class": ["function"]
+    },
+    "obj2ptr": {
+        "syntax": "obj2ptr(List|Object)",
+        "description": "Convert to Low Level Object (C Pointer)",
+        "example": "see obj2ptr(myObject)",
+        "class": ["function"]
+    },
+    "object2pointer": {
+        "syntax": "object2pointer(List|Object)",
+        "description": "Convert to Low Level Object (C Pointer)",
+        "example": "see object2pointer(myObject)",
+        "class": ["function"]
+    },
+    "objectid": {
+        "syntax": "objectid(object)",
+        "description": "Returns the object id",
+        "example": "see objectid(myObject)",
+        "class": ["function"]
+    },
+    "optionalfunc": {
+        "syntax": "optionalfunc(cFuncName)",
+        "description": "Define optional function",
+        "example": "optionalfunc(\"myOptionalFunc\")",
+        "class": ["function"]
+    },
+    "packageclasses": {
+        "syntax": "packageclasses(cPackageName)",
+        "description": "A list contains classes names inside the package",
+        "example": "see packageclasses(\"MyPackage\")",
+        "class": ["function"]
+    },
+    "packagename": {
+        "syntax": "packagename()",
+        "description": "Returns the package name of the latest successful import",
+        "example": "see packagename()",
+        "class": ["function"]
+    },
+    "packages": {
+        "syntax": "packages()",
+        "description": "A list contains packages names",
+        "example": "see packages()",
+        "class": ["function"]
+    },
+    "parentclassname": {
+        "syntax": "parentclassname(object)",
+        "description": "Returns the parent class name of the object class",
+        "example": "see parentclassname(myObject)",
+        "class": ["function"]
+    },
+    "perror": {
+        "syntax": "perror(cErrorMessage)",
+        "description": "Print error message",
+        "example": "perror(\"An error occurred\")",
+        "class": ["function"]
+    },
+    "pointer2object": {
+        "syntax": "pointer2object(Low Level Object)",
+        "description": "Convert Low Level Object to List|Object",
+        "example": "see pointer2object(myPointer)",
+        "class": ["function"]
+    },
+    "pointer2string": {
+        "syntax": "pointer2string(pointer, nStart, nCount)",
+        "description": "Convert pointer to string",
+        "example": "see pointer2string(myPointer, 0, 10)",
+        "class": ["function"]
+    },
+    "pointercompare": {
+        "syntax": "pointercompare(oObject1, oObject2)",
+        "description": "Compare two pointers",
+        "example": "see pointercompare(obj1, obj2)",
+        "class": ["function"]
+    },
+    "pow": {
+        "syntax": "pow(x, y)",
+        "description": "x raised to the power of y",
+        "example": "see pow(2, 3)  # Returns 8",
+        "class": ["function"]
+    },
+    "prevfilename": {
+        "syntax": "prevfilename()",
+        "description": "String contains the previous source file name",
+        "example": "see prevfilename()",
+        "class": ["function"]
+    },
+    "print2str": {
+        "syntax": "print2str(cString)",
+        "description": "Convert print output to string",
+        "example": "see print2str(\"Hello\")",
+        "class": ["function"]
+    },
+    "ptr2obj": {
+        "syntax": "ptr2obj(Low Level Object)",
+        "description": "Convert Low Level Object to List|Object",
+        "example": "see ptr2obj(myPointer)",
+        "class": ["function"]
+    },
+    "ptr2str": {
+        "syntax": "ptr2str(pointer, nStart, nCount)",
+        "description": "Convert pointer to string",
+        "example": "see ptr2str(myPointer, 0, 10)",
+        "class": ["function"]
+    },
+    "ptrcmp": {
+        "syntax": "ptrcmp(oObject1, oObject2)",
+        "description": "Compare two pointers",
+        "example": "see ptrcmp(obj1, obj2)",
+        "class": ["function"]
+    },
+    "puts": {
+        "syntax": "puts(cString)",
+        "description": "Print string with new line",
+        "example": "puts(\"Hello World\")",
+        "class": ["function"]
+    },
+    "raise": {
+        "syntax": "raise(cErrorMessage)",
+        "description": "Raise an exception",
+        "example": "raise(\"An error occurred\")",
+        "class": ["function"]
+    },
+    "random": {
+        "syntax": "random(x)",
+        "description": "Generate a random number in the range [0,x]",
+        "example": "see random(10)",
+        "class": ["function"]
+    },
+    "randomize": {
+        "syntax": "randomize(nNumber)",
+        "description": "Initialize random number generator",
+        "example": "randomize(123)",
+        "class": ["function"]
+    },
+    "read": {
+        "syntax": "read(cFileName)",
+        "description": "Read file content",
+        "example": "see read(\"file.txt\")",
+        "class": ["function"]
+    },
+    "ref": {
+        "syntax": "ref(aList|oObject)",
+        "description": "Get List/Object reference",
+        "example": "see ref(myObject)",
+        "class": ["function"]
+    },
+    "reference": {
+        "syntax": "reference(aList|oObject)",
+        "description": "Get List/Object reference",
+        "example": "see reference(myObject)",
+        "class": ["function"]
+    },
+    "refcount": {
+        "syntax": "refcount(aList|oObject)",
+        "description": "Get References Count",
+        "example": "see refcount(myObject)",
+        "class": ["function"]
+    },
+    "remove": {
+        "syntax": "remove(cFileName)",
+        "description": "Delete file",
+        "example": "remove(\"file.txt\")",
+        "class": ["function"]
+    },
+    "rename": {
+        "syntax": "rename(cOldFileName, cNewFileName)",
+        "description": "Rename file",
+        "example": "rename(\"old.txt\", \"new.txt\")",
+        "class": ["function"]
+    },
+    "reverse": {
+        "syntax": "reverse(List|String)",
+        "description": "Reverse List|String",
+        "example": "see reverse(\"Hello\")  # Returns \"olleH\"",
+        "class": ["function"]
+    },
+    "rewind": {
+        "syntax": "rewind(FileHandle)",
+        "description": "Set the file position to the beginning of the file",
+        "example": "rewind(myFile)",
+        "class": ["function"]
+    },
+    "right": {
+        "syntax": "right(cString, count)",
+        "description": "Get characters starting from the right",
+        "example": "see right(\"Hello\", 2)  # Returns \"lo\"",
+        "class": ["function"]
+    },
+    "ring_give": {
+        "syntax": "ring_give(cVariable)",
+        "description": "Get variable value",
+        "example": "see ring_give(\"myVariable\")",
+        "class": ["function"]
+    },
+    "ring_see": {
+        "syntax": "ring_see(cMessage)",
+        "description": "Print message",
+        "example": "ring_see(\"Hello World\")",
+        "class": ["function"]
+    },
+    "ring_state_delete": {
+        "syntax": "ring_state_delete(oState)",
+        "description": "Delete Ring state",
+        "example": "ring_state_delete(myState)",
+        "class": ["function"]
+    },
+    "ring_state_filetokens": {
+        "syntax": "ring_state_filetokens(oState, cRingFileName)",
+        "description": "Get file tokens",
+        "example": "see ring_state_filetokens(myState, \"file.ring\")",
+        "class": ["function"]
+    },
+    "ring_state_findvar": {
+        "syntax": "ring_state_findvar(oState, cVariableName)",
+        "description": "Find variable",
+        "example": "see ring_state_findvar(myState, \"myVariable\")",
+        "class": ["function"]
+    },
+    "ring_state_init": {
+        "syntax": "ring_state_init()",
+        "description": "Initialize Ring state",
+        "example": "ring_state_init()",
+        "class": ["function"]
+    },
+    "ring_state_main": {
+        "syntax": "ring_state_main(cRingFileName)",
+        "description": "Run Ring program",
+        "example": "ring_state_main(\"program.ring\")",
+        "class": ["function"]
+    },
+    "ring_state_mainfile": {
+        "syntax": "ring_state_mainfile(oState, cRingFileName|cRingoFileName)",
+        "description": "Run Ring program",
+        "example": "ring_state_mainfile(myState, \"program.ring\")",
+        "class": ["function"]
+    },
+    "ring_state_new": {
+        "syntax": "ring_state_new()",
+        "description": "Create new Ring state",
+        "example": "ring_state_new()",
+        "class": ["function"]
+    },
+    "ring_state_newvar": {
+        "syntax": "ring_state_newvar(oState, cVariableName)",
+        "description": "Create new variable",
+        "example": "ring_state_newvar(myState, \"myVariable\")",
+        "class": ["function"]
+    },
+    "ring_state_resume": {
+        "syntax": "ring_state_resume(oState, cPara|nPara, lUseReturn)",
+        "description": "Resume Ring state",
+        "example": "ring_state_resume(myState, \"parameter\", true)",
+        "class": ["function"]
+    },
+    "ring_state_runcode": {
+        "syntax": "ring_state_runcode(oState, cCode)",
+        "description": "Run Ring code",
+        "example": "ring_state_runcode(myState, \"see 1+1\")",
+        "class": ["function"]
+    },
+    "ring_state_runcodeatins": {
+        "syntax": "ring_state_runcodeatins(oState, nPC)",
+        "description": "Run Ring code at instruction",
+        "example": "ring_state_runcodeatins(myState, 10)",
+        "class": ["function"]
+    },
+    "ring_state_runfile": {
+        "syntax": "ring_state_runfile(oState, cRingFileName)",
+        "description": "Run Ring file",
+        "example": "ring_state_runfile(myState, \"file.ring\")",
+        "class": ["function"]
+    },
+    "ring_state_runobjectfile": {
+        "syntax": "ring_state_runobjectfile(oState, cRingObjectFileName)",
+        "description": "Run Ring object file",
+        "example": "ring_state_runobjectfile(myState, \"object.ringo\")",
+        "class": ["function"]
+    },
+    "ring_state_scannererror": {
+        "syntax": "ring_state_scannererror(oState)",
+        "description": "Get scanner error",
+        "example": "see ring_state_scannererror(myState)",
+        "class": ["function"]
+    },
+    "ring_state_setvar": {
+        "syntax": "ring_state_setvar(oState, cVariableName, Value)",
+        "description": "Set variable value",
+        "example": "ring_state_setvar(myState, \"myVariable\", 123)",
+        "class": ["function"]
+    },
+    "ring_state_stringtokens": {
+        "syntax": "ring_state_stringtokens(oState, cRingFileName, lCaseSensitive)",
+        "description": "Get string tokens",
+        "example": "see ring_state_stringtokens(myState, \"file.ring\", true)",
+        "class": ["function"]
+    },
+    "ringvm_callfunc": {
+        "syntax": "ringvm_callfunc(cFuncName)",
+        "description": "Call Ring function",
+        "example": "ringvm_callfunc(\"myFunction\")",
+        "class": ["function"]
+    },
+    "ringvm_calllist": {
+        "syntax": "ringvm_calllist()",
+        "description": "Get call list",
+        "example": "see ringvm_calllist()",
+        "class": ["function"]
+    },
+    "ringvm_cfunctionslist": {
+        "syntax": "ringvm_cfunctionslist()",
+        "description": "Get C functions list",
+        "example": "see ringvm_cfunctionslist()",
+        "class": ["function"]
+    },
+    "ringvm_classeslist": {
+        "syntax": "ringvm_classeslist()",
+        "description": "Get classes list",
+        "example": "see ringvm_classeslist()",
+        "class": ["function"]
+    },
+    "ringvm_codelist": {
+        "syntax": "ringvm_codelist()",
+        "description": "Get code list",
+        "example": "see ringvm_codelist()",
+        "class": ["function"]
+    },
+    "ringvm_evalinscope": {
+        "syntax": "ringvm_evalinscope(nScope, cCode)",
+        "description": "Evaluate code in specific scope",
+        "example": "ringvm_evalinscope(1, \"see 1+1\")",
+        "class": ["function"]
+    },
+    "ringvm_fileslist": {
+        "syntax": "ringvm_fileslist()",
+        "description": "Get files list",
+        "example": "see ringvm_fileslist()",
+        "class": ["function"]
+    },
+    "ringvm_functionslist": {
+        "syntax": "ringvm_functionslist()",
+        "description": "Get functions list",
+        "example": "see ringvm_functionslist()",
+        "class": ["function"]
+    },
+    "ringvm_genarray": {
+        "syntax": "ringvm_genarray(aList)",
+        "description": "Generate array",
+        "example": "see ringvm_genarray(myList)",
+        "class": ["function"]
+    },
+    "ringvm_give": {
+        "syntax": "ringvm_give(cVariableName)",
+        "description": "Get variable value",
+        "example": "see ringvm_give(\"myVariable\")",
+        "class": ["function"]
+    },
+    "ringvm_hideerrormsg": {
+        "syntax": "ringvm_hideerrormsg(lStatus)",
+        "description": "Hide error message",
+        "example": "ringvm_hideerrormsg(true)",
+        "class": ["function"]
+    },
+    "ringvm_info": {
+        "syntax": "ringvm_info()",
+        "description": "Get VM information",
+        "example": "see ringvm_info()",
+        "class": ["function"]
+    },
+    "ringvm_ismempool": {
+        "syntax": "ringvm_ismempool()",
+        "description": "Check if memory pool is used",
+        "example": "see ringvm_ismempool()",
+        "class": ["function"]
+    },
+    "ringvm_memorylist": {
+        "syntax": "ringvm_memorylist()",
+        "description": "Get memory list",
+        "example": "see ringvm_memorylist()",
+        "class": ["function"]
+    },
+    "ringvm_packageslist": {
+        "syntax": "ringvm_packageslist()",
+        "description": "Get packages list",
+        "example": "see ringvm_packageslist()",
+        "class": ["function"]
+    },
+    "ringvm_passerror": {
+        "syntax": "ringvm_passerror()",
+        "description": "Pass error",
+        "example": "ringvm_passerror()",
+        "class": ["function"]
+    },
+    "ringvm_runcode": {
+        "syntax": "ringvm_runcode(cCode)",
+        "description": "Run Ring code",
+        "example": "ringvm_runcode(\"see 1+1\")",
+        "class": ["function"]
+    },
+    "ringvm_scopescount": {
+        "syntax": "ringvm_scopescount()",
+        "description": "Get scopes count",
+        "example": "see ringvm_scopescount()",
+        "class": ["function"]
+    },
+    "ringvm_see": {
+        "syntax": "ringvm_see(cMessage)",
+        "description": "Print message",
+        "example": "ringvm_see(\"Hello World\")",
+        "class": ["function"]
+    },
+    "ringvm_settrace": {
+        "syntax": "ring_settrace(cCode)",
+        "description": "Set trace function",
+        "example": "ringvm_settrace(\"traceFunction\")",
+        "class": ["function"]
+    },
+    "ringvm_tracedata": {
+        "syntax": "ringvm_tracedata()",
+        "description": "Get trace data",
+        "example": "see ringvm_tracedata()",
+        "class": ["function"]
+    },
+    "ringvm_traceevent": {
+        "syntax": "ringvm_traceevent()",
+        "description": "Get trace event",
+        "example": "see ringvm_traceevent()",
+        "class": ["function"]
+    },
+    "ringvm_tracefunc": {
+        "syntax": "ringvm_tracefunc()",
+        "description": "Get trace function",
+        "example": "see ringvm_tracefunc()",
+        "class": ["function"]
+    },
+    "round": {
+        "syntax": "round(x)",
+        "description": "Round to the nearest integer",
+        "example": "see round(4.5)  # Returns 5",
+        "class": ["function"]
+    },
+    "scanf": {
+        "syntax": "scanf(cFormatString)",
+        "description": "Read formatted input",
+        "example": "scanf(\"%d\")",
+        "class": ["function"]
+    },
+    "setattribute": {
+        "syntax": "setattribute(oObject, cAttributeName, Value)",
+        "description": "Set attribute value",
+        "example": "setattribute(myObject, \"attribute\", 123)",
+        "class": ["function"]
+    },
+    "setpointer": {
+        "syntax": "setpointer(pointer, nNewAddress)",
+        "description": "Set pointer address",
+        "example": "setpointer(myPointer, 12345)",
+        "class": ["function"]
+    },
+    "setptr": {
+        "syntax": "setptr(pointer, nNewAddress)",
+        "description": "Set pointer address",
+        "example": "setptr(myPointer, 12345)",
+        "class": ["function"]
+    },
+    "shutdown": {
+        "syntax": "shutdown(nStatus)",
+        "description": "Shutdown the application",
+        "example": "shutdown(0)",
+        "class": ["function"]
+    },
+    "sin": {
+        "syntax": "sin(x)",
+        "description": "The sine of an angle of x radians",
+        "example": "see sin(0)  # Returns 0",
+        "class": ["function"]
+    },
+    "sinh": {
+        "syntax": "sinh(x)",
+        "description": "The hyperbolic sine of x radians",
+        "example": "see sinh(0)  # Returns 0",
+        "class": ["function"]
+    },
+    "sort": {
+        "syntax": "sort(List, nColumn, cAttribute)",
+        "description": "Sort list",
+        "example": "sort(myList, 1, \"attribute\")",
+        "class": ["function"]
+    },
+    "space": {
+        "syntax": "space(nBytesCount)",
+        "description": "Create string with spaces",
+        "example": "see space(5)  # Returns \"     \"",
+        "class": ["function"]
+    },
+    "sqrt": {
+        "syntax": "sqrt(x)",
+        "description": "The square root of x",
+        "example": "see sqrt(4)  # Returns 2",
+        "class": ["function"]
+    },
+    "srandom": {
+        "syntax": "srandom(x)",
+        "description": "Initialize random number generator",
+        "example": "srandom(123)",
+        "class": ["function"]
+    },
+    "str2hex": {
+        "syntax": "str2hex(cString)",
+        "description": "Convert string to hexadecimal string",
+        "example": "see str2hex(\"Hello\")  # Returns \"48656c6c6f\"",
+        "class": ["function"]
+    },
+    "str2hexcstyle": {
+        "syntax": "str2hexcstyle(cString)",
+        "description": "Convert string to hexadecimal string (C style)",
+        "example": "see str2hexcstyle(\"Hello\")  # Returns \"\\x48\\x65\\x6c\\x6c\\x6f\"",
+        "class": ["function"]
+    },
+    "str2list": {
+        "syntax": "str2list(cString)",
+        "description": "Convert string to list",
+        "example": "see str2list(\"Hello\")  # Returns [\"H\", \"e\", \"l\", \"l\", \"o\"]",
+        "class": ["function"]
+    },
+    "strcmp": {
+        "syntax": "strcmp(cString1, cString2)",
+        "description": "Compare two strings",
+        "example": "see strcmp(\"Hello\", \"World\")",
+        "class": ["function"]
+    },
+    "string": {
+        "syntax": "string(number)",
+        "description": "Convert number to string",
+        "example": "see string(123)  # Returns \"123\"",
+        "class": ["function"]
+    },
+    "substr": {
+        "syntax": "substr(cString, substring|position, count|newsubstring, 1)",
+        "description": "Get substring or transform string",
+        "example": "see substr(\"Hello\", 1, 2)  # Returns \"He\"",
+        "class": ["function"]
+    },
+    "swap": {
+        "syntax": "swap(aList, nItem1, nItem2)",
+        "description": "Swap two items in a list",
+        "example": "swap(myList, 1, 2)",
+        "class": ["function"]
+    },
+    "sysget": {
+        "syntax": "sysget(cVariable)",
+        "description": "Get environment variable",
+        "example": "see sysget(\"PATH\")",
+        "class": ["function"]
+    },
+    "sysset": {
+        "syntax": "sysset(cVariable, cValue)",
+        "description": "Set environment variable",
+        "example": "sysset(\"MY_VAR\", \"value\")",
+        "class": ["function"]
+    },
+    "syssleep": {
+        "syntax": "syssleep(nMilliSecs)",
+        "description": "Sleep for milliseconds",
+        "example": "syssleep(1000)",
+        "class": ["function"]
+    },
+    "system": {
+        "syntax": "system(cCommand)",
+        "description": "Execute system command",
+        "example": "system(\"ls\")",
+        "class": ["function"]
+    },
+    "sysunset": {
+        "syntax": "sysunset(cVariable)",
+        "description": "Unset environment variable",
+        "example": "sysunset(\"MY_VAR\")",
+        "class": ["function"]
+    },
+    "tan": {
+        "syntax": "tan(x)",
+        "description": "Tangent of an angle of x radians",
+        "example": "see tan(0)  # Returns 0",
+        "class": ["function"]
+    },
+    "tanh": {
+        "syntax": "tanh(x)",
+        "description": "The hyperbolic tangent of x radians",
+        "example": "see tanh(0)  # Returns 0",
+        "class": ["function"]
+    },
+    "tempfile": {
+        "syntax": "tempfile()",
+        "description": "Create temporary file",
+        "example": "see tempfile()",
+        "class": ["function"]
+    },
+    "tempname": {
+        "syntax": "tempname()",
+        "description": "Generate temporary file name",
+        "example": "see tempname()",
+        "class": ["function"]
+    },
+    "time": {
+        "syntax": "time()",
+        "description": "Get current time",
+        "example": "see time()",
+        "class": ["function"]
+    },
+    "timelist": {
+        "syntax": "timelist()",
+        "description": "Get time list",
+        "example": "see timelist()",
+        "class": ["function"]
+    },
+    "trim": {
+        "syntax": "trim(cString)",
+        "description": "Remove spaces from right and left",
+        "example": "see trim(\"  Hello  \")  # Returns \"Hello\"",
+        "class": ["function"]
+    },
+    "type": {
+        "syntax": "type(value)",
+        "description": "Get variable type",
+        "example": "see type(123)  # Returns \"number\"",
+        "class": ["function"]
+    },
+    "ungetc": {
+        "syntax": "ungetc(FileHandle, character)",
+        "description": "Push character back to stream",
+        "example": "ungetc(myFile, \"A\")",
+        "class": ["function"]
+    },
+    "unsigned": {
+        "syntax": "unsigned(nNum1, nNum2, cOperator)",
+        "description": "Perform operation using unsigned numbers",
+        "example": "see unsigned(5, 3, \"+\")",
+        "class": ["function"]
+    },
+    "upper": {
+        "syntax": "upper(cString)",
+        "description": "Convert string letters to UPPER case",
+        "example": "see upper(\"hello\")  # Returns \"HELLO\"",
+        "class": ["function"]
+    },
+    "uptime": {
+        "syntax": "uptime()",
+        "description": "Get system uptime",
+        "example": "see uptime()",
+        "class": ["function"]
+    },
+    "variablepointer": {
+        "syntax": "variablepointer(cVariableName, cPointerType)",
+        "description": "Get variable pointer",
+        "example": "see variablepointer(\"myVariable\", \"type\")",
+        "class": ["function"]
+    },
+    "varptr": {
+        "syntax": "varptr(cVariableName, cPointerType)",
+        "description": "Get variable pointer",
+        "example": "see varptr(\"myVariable\", \"type\")",
+        "class": ["function"]
+    },
+    "version": {
+        "syntax": "version([lPatch])",
+        "description": "Get Ring version",
+        "example": "see version()",
+        "class": ["function"]
+    },
+    "windowsnl": {
+        "syntax": "windowsnl()",
+        "description": "Get Windows new line",
+        "example": "see windowsnl()",
+        "class": ["function"]
+    },
+    "write": {
+        "syntax": "write(cFileName, cString)",
+        "description": "Write to file",
+        "example": "write(\"file.txt\", \"Hello World\")",
+        "class": ["function"]
+    }
+}

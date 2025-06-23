@@ -1,0 +1,92 @@
+[
+    {
+        "caption": "Tools",
+        "mnemonic": "T",
+        "id": "tools",
+        "children": [
+            {
+                "caption": "Ring",
+                "id": "ring",
+                "children": [
+                    {
+                        "caption": "Run Ring File",
+                        "command": "ring_run",
+                        "mnemonic": "R"
+                    },
+                    {
+                        "caption": "-",
+                        "id": "separator1"
+                    },
+                    {
+                        "caption": "Toggle Tooltips",
+                        "command": "ring_toggle_tooltips",
+                        "mnemonic": "T"
+                    },
+                    {
+                        "caption": "-",
+                        "id": "separator2"
+                    },
+                    {
+                        "caption": "Open Ring Website",
+                        "command": "ring_open_website",
+                        "mnemonic": "W"
+                    },
+                    {
+                        "caption": "Open Documentation",
+                        "command": "ring_open_documentation",
+                        "mnemonic": "D"
+                    },
+                    {
+                        "caption": "Open Google Group",
+                        "command": "ring_open_group",
+                        "mnemonic": "G"
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "id": "preferences",
+        "caption": "Preferences",
+        "children": [
+            {
+                "id": "package-settings",
+                "caption": "Package Settings",
+                "children": [
+                    {
+                        "id": "ring-sublime",
+                        "caption": "Ring",
+                        "children": [
+                            {
+                                "command": "edit_settings",
+                                "caption": "Settings",
+                                "args": {
+                                    "base_file": "${packages}/ring-sublime/settings/ring.sublime-settings"
+                                }
+                            },
+                            {
+                                "caption": "-",
+                                "id": "separator2"
+                            },
+                            {
+                                "caption": "Open Ring Website",
+                                "command": "ring_open_website",
+                                "mnemonic": "W"
+                            },
+                            {
+                                "caption": "Open Documentation",
+                                "command": "ring_open_documentation",
+                                "mnemonic": "D"
+                            },
+                            {
+                                "caption": "Open Google Group",
+                                "command": "ring_open_group",
+                                "mnemonic": "G"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

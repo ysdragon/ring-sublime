@@ -1,0 +1,18 @@
+Ring Language Support 1.1.0
+==========================
+
+🚀 New Features:
+   • Interactive tooltips with function documentation and examples
+   • Added comprehensive main menu integration under Tools > Ring
+   • Added preferences menu integration for easy settings access
+   • Copy-to-clipboard functionality for code examples in tooltips
+
+📝 Menu Additions:
+   • Tools > Ring > Run Ring File
+   • Tools > Ring > Toggle Tooltips  
+   • Tools > Ring > Open Ring Website
+   • Tools > Ring > Open Documentation
+   • Tools > Ring > Open Google Group
+   • Preferences > Package Settings > Ring > Settings
+
+For more information, visit: https://github.com/ysdragon/ring-sublime
