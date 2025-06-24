@@ -1,9 +1,6 @@
 import sublime
 import sublime_plugin
-import subprocess
 import re
-import os
-import signal
 import json
 import mdpopups
 import webbrowser
@@ -16,23 +13,26 @@ SCOPES = [
 ]
 
 def lang_map_settings():
-    # load the settings to transfer:
-    res = sublime.load_resource("Packages/ring-sublime/tooltips/lang_map.sublime-settings")
-    lang_map = sublime.decode_value(res).get("mdpopups.sublime_user_lang_map", {})
+    try:
+        # load the settings to transfer:
+        res = sublime.load_resource("Packages/Ring/tooltips/lang_map.sublime-settings")
+        lang_map = sublime.decode_value(res).get("mdpopups.sublime_user_lang_map", {})
 
-    # load user settings
-    user_settings = sublime.load_settings("Preferences.sublime-settings")
-    user_lang_map = user_settings.get("mdpopups.sublime_user_lang_map", {})
+        # load user settings
+        user_settings = sublime.load_settings("Preferences.sublime-settings")
+        user_lang_map = user_settings.get("mdpopups.sublime_user_lang_map", {})
 
-    if user_lang_map.get("Ring") == lang_map.get("Ring"):
-        return
+        if user_lang_map.get("Ring") == lang_map.get("Ring"):
+            return
 
-    # transfer the settings to the user settings
-    user_lang_map.update(lang_map)
-    user_settings.set("mdpopups.sublime_user_lang_map", user_lang_map)
+        # transfer the settings to the user settings
+        user_lang_map.update(lang_map)
+        user_settings.set("mdpopups.sublime_user_lang_map", user_lang_map)
 
-    # save the user settings
-    sublime.save_settings("Preferences.sublime-settings")
+        # save the user settings
+        sublime.save_settings("Preferences.sublime-settings")
+    except Exception as e:
+        print("Ring plugin: Could not load lang_map settings: {}".format(e))
 
 def plugin_loaded():
     print("Ring plugin loaded")
@@ -44,14 +44,14 @@ def plugin_loaded():
             Pref.show_tooltips = settings.get("show_tooltips", True)
             
     Pref = Pref()
-    settings = sublime.load_settings("ring.sublime-settings")
-    
+    settings = sublime.load_settings("Ring.sublime-settings")
+        
     # Load tooltip data from json
-    tooltips = sublime.load_resource("Packages/ring-sublime/tooltips/ring.json")
+    tooltips = sublime.load_resource("Packages/Ring/tooltips/ring.json")
     Pref.data = json.loads(tooltips)
-    
+        
     # Load CSS from external file
-    Pref.css = sublime.load_resource("Packages/ring-sublime/tooltips/style.css").replace("\r", "")
+    Pref.css = sublime.load_resource("Packages/Ring/tooltips/style.css").replace("\r", "")
     
     Pref.load()
     lang_map_settings()
@@ -109,7 +109,7 @@ class RingListener(sublime_plugin.EventListener):
         
         # Example
         if command.get("example"):
-            lang = mdpopups.get_language_from_view(view) or "ring"
+            lang = mdpopups.get_language_from_view(view) or ""
             example = mdpopups.syntax_highlight(view, command["example"], language=lang)
             menus.append("<div class='example-container'>")
             menus.append("Example:")
