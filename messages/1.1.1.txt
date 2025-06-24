@@ -1,0 +1,9 @@
+Ring Language Support for Sublime Text - Version 1.1.1
+========================================================
+
+Changes in version 1.1.1:
+
+Bug Fixes:
+----------
+	* Fixed an issue where resource paths were not handled correctly when the plugin was installed via Package Control
+	* Resolved plugin compatibility issues with Package Control installation
