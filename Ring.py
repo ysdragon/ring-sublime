@@ -181,7 +181,8 @@ class RingRunCommand(sublime_plugin.TextCommand):
             sublime.error_message("Current file is not a Ring file (.ring)")
     
     def is_enabled(self):
-        return self.view.file_name() and self.view.file_name().endswith('.ring')
+        file_name = self.view.file_name()
+        return bool(file_name and file_name.endswith('.ring'))
 
 class RingOpenWebsiteCommand(sublime_plugin.ApplicationCommand):
     def run(self):
