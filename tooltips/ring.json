@@ -128,7 +128,7 @@
     "acos": {
         "syntax": "acos(x)",
         "description": "The principal value of the arc cosine of x",
-        "example": "see acos(0.5)  # Returns 1.0472",
+        "example": "see acos(0.5)  # Returns 1.05",
         "class": ["function"]
     },
     "add": {
@@ -152,7 +152,7 @@
     "addmethod": {
         "syntax": "addmethod(Object, cNewMethodName, cMethodName|AnonymousFunction)",
         "description": "Add method to object",
-        "example": "addmethod(myObject, \"newMethod\", func() see \"Hello\")",
+        "example": "o1 = new point { x=10 y=20 z=30 }\n\naddmethod(o1,\"print\", func { see x + nl + y + nl + z + nl } )\n\no1.print()\n\nclass point\n        x y z\n\n/*Output:\n10\n20\n30\n*/",
         "class": ["function"]
     },
     "ascii": {
@@ -164,7 +164,7 @@
     "asin": {
         "syntax": "asin(x)",
         "description": "The principal value of the arc sine of x",
-        "example": "see asin(0.5)  # Returns 0.5236",
+        "example": "see asin(0.5)  # Returns 0.52",
         "class": ["function"]
     },
     "assert": {
@@ -176,13 +176,13 @@
     "atan": {
         "syntax": "atan(x)",
         "description": "The principal value of the arc tangent of x",
-        "example": "see atan(1)  # Returns 0.7854",
+        "example": "see atan(1)  # Returns 0.79",
         "class": ["function"]
     },
     "atan2": {
         "syntax": "atan2(y, x)",
         "description": "The principal arc tangent of y/x",
-        "example": "see atan2(1, 1)  # Returns 0.7854",
+        "example": "see atan2(1, 1)  # Returns 0.79",
         "class": ["function"]
     },
     "attributes": {
@@ -200,19 +200,19 @@
     "bytes2double": {
         "syntax": "bytes2double(cBytes)",
         "description": "Convert bytes to double",
-        "example": "see bytes2double(\"\\x40\\x09\\x21\\xfb\\x54\\x44\\x2d\\x18\")",
+        "example": "r = double2bytes(1.5)\nsee bytes2double(r) # Returns 1.50",
         "class": ["function"]
     },
     "bytes2float": {
         "syntax": "bytes2float(cBytes)",
         "description": "Convert bytes to float",
-        "example": "see bytes2float(\"\\x40\\x49\\x0f\\xdb\")",
+        "example": "r = float2bytes(1.5555)\nsee bytes2float(r) # Returns 1.56",
         "class": ["function"]
     },
     "bytes2int": {
         "syntax": "bytes2int(cBytes)",
         "description": "Convert bytes to int",
-        "example": "see bytes2int(\"\\x00\\x00\\x00\\x01\")",
+        "example": "r = int2bytes(77)\nsee bytes2int(r) # Returns 77",
         "class": ["function"]
     },
     "callgarbagecollector": {
@@ -330,9 +330,9 @@
         "class": ["function"]
     },
     "decimals": {
-        "syntax": "decimals(n)",
+        "syntax": "decimals(nDecimalsCount)",
         "description": "Determine the decimals digits after the point",
-        "example": "see decimals(3.14159)  # Returns 5",
+        "example": "x = 1.1234567890123\nfor d = 0 to 14\n    decimals(d)\n    see x + nl\nnext\n# Output:\n# 1\n# 1.1\n# 1.12\n# 1.123\n# 1.1235\n# 1.12346\n# 1.123457\n# 1.1234568\n# 1.12345679\n# 1.123456789\n# 1.1234567890\n# 1.12345678901\n# 1.123456789012\n# 1.1234567890123\n# 1.12345678901230",
         "class": ["function"]
     },
     "del": {
@@ -344,7 +344,7 @@
     "diffdays": {
         "syntax": "diffdays(cDate1, cDate2)",
         "description": "Number of days (Date1 - Date2)",
-        "example": "see diffdays(\"01/01/2023\", \"10/01/2023\")  # Returns 9",
+        "example": "see diffdays(\"10/01/2023\", \"01/01/2023\")  # Returns 9",
         "class": ["function"]
     },
     "dir": {
@@ -386,7 +386,7 @@
     "exp": {
         "syntax": "exp(x)",
         "description": "The value of e raised to the xth power",
-        "example": "see exp(1)  # Returns 2.7182",
+        "example": "see exp(1)  # Returns 2.72",
         "class": ["function"]
     },
     "fabs": {
@@ -450,9 +450,9 @@
         "class": ["function"]
     },
     "find": {
-        "syntax": "find(List, ItemValue, nColumn, cAttribute)",
-        "description": "Find item in list",
-        "example": "index = find(myList, \"value\", 1, \"attribute\")\nsee index",
+        "syntax": "find(List, ItemValue [, nColumn] [, cAttribute])",
+        "description": "Find item in list, returns the Item Index",
+        "example": "# Simple search\nindex = find(myList, \"value\")\nsee index\n\n# Search in specific column\nindex = find(myList, \"value\", 1)\nsee index\n\n# Search in specific column with attribute\nindex = find(myList, \"value\", 1, \"attribute\")\nsee index",
         "class": ["function"]
     },
     "float2bytes": {
@@ -463,7 +463,7 @@
     },
     "floor": {
         "syntax": "floor(x)",
-        "description": "The largest integer value",
+        "description": "The largest number value",
         "example": "see floor(4.7)  # Returns 4",
         "class": ["function"]
     },
@@ -590,7 +590,7 @@
     "hex": {
         "syntax": "hex(decimal)",
         "description": "Convert decimal to hexadecimal",
-        "example": "see hex(255)  # Returns \"FF\"",
+        "example": "see hex(255)  # Returns \"ff\"",
         "class": ["function"]
     },
     "hex2str": {
@@ -656,7 +656,7 @@
     "iscfunction": {
         "syntax": "iscfunction(cFunctionName)",
         "description": "Check if the C function is defined",
-        "example": "see iscfunction(\"myFunction\")",
+        "example": "see iscfunction(\"myFunction\") # --> returns 1 if the C function is defined\n                              # returns 0 if the C function is not defined",
         "class": ["function"]
     },
     "isclass": {
@@ -668,7 +668,7 @@
     "iscntrl": {
         "syntax": "iscntrl(value)",
         "description": "Check if value is a control character",
-        "example": "see iscntrl(\"\\n\")",
+        "example": "see iscntrl(\"\\n\") # Returns 0\nsee iscntrl(nl) # Returns 1",
         "class": ["function"]
     },
     "isdigit": {
@@ -860,7 +860,7 @@
     "lines": {
         "syntax": "lines(cString)",
         "description": "Number of lines inside the string",
-        "example": "see lines(\"Hello\\nWorld\")  # Returns 2",
+        "example": "see lines(\"Hello\"+nl+\"World\")  # Returns 2",
         "class": ["function"]
     },
     "list": {
@@ -872,7 +872,7 @@
     "list2str": {
         "syntax": "list2str(list)",
         "description": "Convert list to string",
-        "example": "see list2str([\"A\", \"B\", \"C\"])  # Returns \"ABC\"",
+        "example": "see list2str([\"A\", \"B\", \"C\"])  # Returns --> A\n\t                           #             B \n\t                           #             C",
         "class": ["function"]
     },
     "locals": {
@@ -884,7 +884,7 @@
     "log": {
         "syntax": "log(x, b)",
         "description": "The natural logarithm of x (the base of e)",
-        "example": "see log(10, 2)  # Returns 3.3219",
+        "example": "see log(10, 2)  # Returns 3.32",
         "class": ["function"]
     },
     "log10": {
@@ -1409,18 +1409,6 @@
         "example": "see ringvm_tracefunc()",
         "class": ["function"]
     },
-    "round": {
-        "syntax": "round(x)",
-        "description": "Round to the nearest integer",
-        "example": "see round(4.5)  # Returns 5",
-        "class": ["function"]
-    },
-    "scanf": {
-        "syntax": "scanf(cFormatString)",
-        "description": "Read formatted input",
-        "example": "scanf(\"%d\")",
-        "class": ["function"]
-    },
     "setattribute": {
         "syntax": "setattribute(oObject, cAttributeName, Value)",
         "description": "Set attribute value",
@@ -1490,7 +1478,7 @@
     "str2hexcstyle": {
         "syntax": "str2hexcstyle(cString)",
         "description": "Convert string to hexadecimal string (C style)",
-        "example": "see str2hexcstyle(\"Hello\")  # Returns \"\\x48\\x65\\x6c\\x6c\\x6f\"",
+        "example": "see str2hexcstyle(\"Hello\")  # Returns \"0x48,0x65,0x6c,0x6c,0x6f\"",
         "class": ["function"]
     },
     "str2list": {
@@ -1598,7 +1586,7 @@
     "type": {
         "syntax": "type(value)",
         "description": "Get variable type",
-        "example": "see type(123)  # Returns \"number\"",
+        "example": "see type(123)  # Returns \"NUMBER\"",
         "class": ["function"]
     },
     "ungetc": {

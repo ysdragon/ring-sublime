@@ -1436,18 +1436,6 @@
             "annotation": "Get trace function"
         },
         {
-            "trigger": "round",
-            "contents": "round(${1:x})",
-            "kind": "function",
-            "annotation": "Round to the nearest integer"
-        },
-        {
-            "trigger": "scanf",
-            "contents": "scanf(${1:cFormatString})",
-            "kind": "function",
-            "annotation": "Read formatted input"
-        },
-        {
             "trigger": "setattribute",
             "contents": "setattribute(${1:oObject}, ${2:cAttributeName}, ${3:Value})",
             "kind": "function",
