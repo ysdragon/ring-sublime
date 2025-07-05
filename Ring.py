@@ -92,6 +92,7 @@ class RingListener(sublime_plugin.EventListener):
                 if i: menus.append(",")
                 menus.append("<span class='class'> {}</span>".format(cl))
             menus.append("</div>")
+        menus.append("</div>")
                     
         # Content
         menus.append("<div class='content'>")
