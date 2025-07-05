@@ -7,6 +7,7 @@ import webbrowser
 
 SCOPES = [
     "support.function.ring",
+    "support.function.builtin.ring",
     "keyword.control.ring",
     "keyword.control.conditional.ring",
     "storage.type.ring"
@@ -48,7 +49,10 @@ def plugin_loaded():
         
     # Load tooltip data from json
     tooltips = sublime.load_resource("Packages/Ring/tooltips/ring.json")
-    Pref.data = json.loads(tooltips)
+    tooltip_data = json.loads(tooltips)
+    
+    # Convert keys to lowercase for case-insensitive lookup
+    Pref.data = {k.lower(): v for k, v in tooltip_data.items()}
         
     # Load CSS from external file
     Pref.css = sublime.load_resource("Packages/Ring/tooltips/style.css").replace("\r", "")
@@ -72,6 +76,7 @@ class RingListener(sublime_plugin.EventListener):
             return
             
         word = view.substr(view.word(view.sel()[0])).lower()
+
         command = Pref.data.get(word)
         if not command:
             return
