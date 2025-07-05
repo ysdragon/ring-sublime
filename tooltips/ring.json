@@ -583,7 +583,7 @@
     },
     "get": {
         "syntax": "get cVariableName",
-        "description": "Get input from standard input",
+        "description": "Get string from standard input",
         "example": "see \"What is your name? \"\nget cName\nsee \"Hello \" + cName",
         "class": ["function"]
     },
@@ -595,7 +595,7 @@
     },
     "give": {
         "syntax": "give cVariableName",
-        "description": "Get input from standard input",
+        "description": "Get string from standard input",
         "example": "see \"What is your name? \"\ngive cName\nsee \"Hello \" + cName",
         "class": ["function"]
     },
@@ -626,7 +626,7 @@
     "input": {
         "syntax": "input(nCount)",
         "description": "Get input from standard input",
-        "example": "see input(5)",
+        "example": "see \"Enter message (30 characters) : \"\ncMsg = input(30)\nsee \"Message : \" + cMsg",
         "class": ["function"]
     },
     "insert": {

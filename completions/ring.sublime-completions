@@ -230,6 +230,12 @@
             "annotation": "Convert bytes to double"
         },
         {
+            "trigger": "bye",
+            "contents": "bye",
+            "kind": "command",
+            "annotation": "Exit the program"
+        },
+        {
             "trigger": "bytes2float",
             "contents": "bytes2float(${1:cBytes})",
             "kind": "function",
@@ -611,7 +617,7 @@
             "trigger": "get",
             "contents": "get ${1:cVariableName}",
             "kind": "function",
-            "annotation": "Get input from standard input"
+            "annotation": "Get string from standard input"
         },
         {
             "trigger": "getstring",
@@ -623,7 +629,7 @@
             "trigger": "give",
             "contents": "give ${1:cVariableName}",
             "kind": "function",
-            "annotation": "Get input from standard input"
+            "annotation": "Get string from standard input"
         },
         {
             "trigger": "globals",
