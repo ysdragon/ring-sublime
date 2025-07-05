@@ -98,32 +98,32 @@
     "changeringkeyword": {
         "syntax": "changeringkeyword OldKeyword NewKeyword",
         "description": "Modify Ring language keywords",
-        "example": "changeringkeyword \"old\" \"new\"",
-        "class": ["function"]
+        "example": "changeringkeyword see print\nprint \"welcome\" + nl\nchangeringkeyword print see\nsee \"Welcome\" + nl",
+        "class": ["command"]
     },
     "changeringoperator": {
         "syntax": "changeringoperator OldOperator NewOperator",
         "description": "Modify Ring language operators",
-        "example": "changeringoperator \"+\" \"add\"",
-        "class": ["function"]
+        "example": "changeringoperator + plus\nsee 1 plus 2  # Returns 3",
+        "class": ["command"]
     },
     "enablehashcomments": {
         "syntax": "enablehashcomments",
         "description": "Enable '#' for single-line comments",
         "example": "enablehashcomments",
-        "class": ["function"]
+        "class": ["command"]
     },
     "disablehashcomments": {
         "syntax": "disablehashcomments",
         "description": "Disable '#' for single-line comments",
         "example": "disablehashcomments",
-        "class": ["function"]
+        "class": ["command"]
     },
     "loadsyntax": {
         "syntax": "loadsyntax \"syntax_rules_filename\"",
         "description": "Load custom syntax rules from a file",
-        "example": "loadsyntax \"rules.txt\"",
-        "class": ["function"]
+        "example": "loadsyntax \"syntaxfile.ring\"",
+        "class": ["command"]
     },
     "acos": {
         "syntax": "acos(x)",
