@@ -17,7 +17,6 @@ variables:
   commands: '\b(?i:(enablehashcomments|disablehashcomments|changeringkeyword|changeringoperator|loadsyntax|ccatcherror))\b'
   controls: '\b(?i:(if|but|else|elseif|ok|for|foreach|to|next|catch|step|endfor|while|other|end|do|endif|endwhile|endswitch|endtry|try|break|bye|continue|default|endfunc|endfunction|return|switch|case|on|off|do|again|exit|loop|done|in))\b'
   operators: '(\+|~|-|\*|/|%|&|(\|)|^|!|<|>|=|\.)'
-  types: '\b(?i:(char|unsigned|signed|int|short|long|float|double|void|byte|boolean|string|list|number|object|public|static|abstract|protected|override|@override))\b'
 contexts:
   main:
     - include: comments
@@ -79,8 +78,6 @@ contexts:
       scope: keyword.control.ring
     - match: "{{controls}}"
       scope: keyword.control.conditional.ring
-    - match: "{{types}}"
-      scope: storage.type.ring
 
   commands:
     - match: "{{commands}}"
