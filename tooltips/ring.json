@@ -215,6 +215,12 @@
         "example": "r = int2bytes(77)\nsee bytes2int(r) # Returns 77",
         "class": ["function"]
     },
+    "cCatchError": {
+        "syntax": "cCatchError",
+        "description": "Catch error in try-catch block",
+        "example": "try\n\tx = 1 / 0\ncatch\n\tsee \"Catching error: \" + cCatchError + nl\nend",
+        "class": ["command"]
+    },
     "callgarbagecollector": {
         "syntax": "callgarbagecollector()",
         "description": "Call garbage collector",
