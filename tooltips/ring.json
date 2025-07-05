@@ -389,6 +389,12 @@
         "example": "see exefolder()",
         "class": ["function"]
     },
+    "exit": {
+        "syntax": "exit",
+        "description": "Go outside one or more of loops.",
+        "example": "for x = 1 to 10\n\tsee x + nl\n\tif x = 5\n\t\texit\n\tok\nnext",
+        "class": ["command"]
+    },
     "exp": {
         "syntax": "exp(x)",
         "description": "The value of e raised to the xth power",
@@ -892,6 +898,12 @@
         "description": "Convert list to string",
         "example": "see list2str([\"A\", \"B\", \"C\"])  # Returns --> A\n\t                           #             B \n\t                           #             C",
         "class": ["function"]
+    },
+    "loop": {
+        "syntax": "loop",
+        "description": "Jump to the next iteration in the loop",
+        "example": "for x = 1 to 10\n\tif x = 3\n\t\tsee \"Number Three\" + nl\n\t\tloop\n\tok\n\tsee x + nl\nnext",
+        "class": ["command"]
     },
     "locals": {
         "syntax": "locals()",

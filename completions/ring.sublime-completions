@@ -422,6 +422,12 @@
             "annotation": "String contains the Ring executable path"
         },
         {
+            "trigger": "exit",
+            "contents": "exit",
+            "kind": "command",
+            "annotation": "Go outside one or more of loops."
+        },
+        {
             "trigger": "exp",
             "contents": "exp(${1:x})",
             "kind": "function",
@@ -924,6 +930,12 @@
             "contents": "list2str(${1:list})",
             "kind": "function",
             "annotation": "Convert list to string"
+        },
+        {
+            "trigget": "loop",
+            "contents": "loop",
+            "kind": "command",
+            "annotation": "Jump to the next iteration in the loop."
         },
         {
             "trigger": "locals",
