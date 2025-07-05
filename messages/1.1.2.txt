@@ -1,0 +1,8 @@
+Ring Language Support for Sublime Text - Version 1.1.2
+========================================================
+
+Changes in version 1.1.2:
+
+Bug Fixes:
+----------
+    * Added the missing `dependencies.json` file to the package, which is required for proper functionality.
