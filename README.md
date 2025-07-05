@@ -19,15 +19,6 @@ This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Subl
 2. Type `Package Control: Install Package` and select from the dropdown list.
 3. Type `Ring` in the search box and select the `Ring` package from the list.
 
-### Manual Installation
-
-1. Download or clone this repository.
-```bash
-git clone https://github.com/ysdragon/ring-sublime
-```
-2. Copy the `ring-sublime` folder into your Sublime Text `Packages` directory. You can find the `Packages` directory by going to `Preferences` > `Browse Packages...` in Sublime Text.
-3. Restart Sublime Text.
-
 ## Usage
 
 Once installed, Sublime Text should automatically detect `.ring`, `.rform` and `.rh` files and apply the syntax highlighting. If it does not, you can manually set the syntax by:
