@@ -116,15 +116,23 @@ contexts:
     - match: '\)'
       scope: punctuation.section.parameters.end.ring
       pop: true
-    - match: '\b[a-zA-Z_]\w*\b'
+    - match: '\b(?i:(func))\s*(\(|\{)'
+      captures:
+        1: keyword.control.ring
+        2: punctuation.section.function.begin.ring
+      push: anonymous-function
+    - match: '(?i:\b[a-zA-Z_]\w*\b)'
       scope: variable.parameter.ring
     - match: ","
       scope: punctuation.separator.ring
-    - include: main
+    - include: strings
+    - include: numbers
+    - include: operators
+    - include: special-values
 
   function-parameters-no-parens:
     - meta_scope: meta.function.parameters.ring
-    - match: '\b[a-zA-Z_]\w*\b'
+    - match: '(?i:\b[a-zA-Z_]\w*\b)'
       scope: variable.parameter.ring
     - match: ","
       scope: punctuation.separator.ring
