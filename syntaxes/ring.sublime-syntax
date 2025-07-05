@@ -13,11 +13,11 @@ file_extensions:
   - rform
 
 variables:
-  keywords: '\b(?i:(enablehashcomments|disablehashcomments|call|class|from|get|give|import|load|new|package|private|changeringkeyword|changeringoperator|loadsyntax|endclass|endpackage|nl|see|put))\b'
+  keywords: '\b(?i:(class|from|get|give|import|load|new|package|private|endclass|endpackage|nl|see|put|call))\b'
+  commands: '\b(?i:(enablehashcomments|disablehashcomments|changeringkeyword|changeringoperator|loadsyntax|ccatcherror))\b'
   controls: '\b(?i:(if|but|else|elseif|ok|for|foreach|to|next|catch|step|endfor|while|other|end|do|endif|endwhile|endswitch|endtry|try|break|bye|continue|default|endfunc|endfunction|return|switch|case|on|off|do|again|exit|loop|done|in))\b'
   operators: '(\+|~|-|\*|/|%|&|(\|)|^|!|<|>|=|\.)'
   types: '\b(?i:(char|unsigned|signed|int|short|long|float|double|void|byte|boolean|string|list|number|object|public|static|abstract|protected|override|@override))\b'
-
 contexts:
   main:
     - include: comments
@@ -26,6 +26,7 @@ contexts:
     - include: keywords-and-controls
     - include: function-definition
     - include: functions
+    - include: commands
     - include: print-operator
     - include: strings
     - include: numbers
@@ -80,6 +81,10 @@ contexts:
       scope: keyword.control.conditional.ring
     - match: "{{types}}"
       scope: storage.type.ring
+
+  commands:
+    - match: "{{commands}}"
+      scope: support.function.builtin.ring
 
   function-definition:
     - match: '\b(?i:(func|def))\s+([a-zA-Z_]\w*)\s*(\()'
