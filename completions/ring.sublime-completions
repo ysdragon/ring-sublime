@@ -248,6 +248,12 @@
             "annotation": "Call garbage collector"
         },
         {
+            "trigger": "call",
+            "contents": "call ${1:variable}(${2:parameters})",
+            "kind": "function",
+            "annotation": "Call a function from a variable"
+        },
+        {
             "trigger": "callgc",
             "contents": "callgc()",
             "kind": "function",
@@ -602,10 +608,22 @@
             "annotation": "Get pointer address"
         },
         {
+            "trigger": "get",
+            "contents": "get ${1:cVariableName}",
+            "kind": "function",
+            "annotation": "Get input from standard input"
+        },
+        {
             "trigger": "getstring",
             "contents": "getstring()",
             "kind": "function",
             "annotation": "Get string from standard input"
+        },
+        {
+            "trigger": "give",
+            "contents": "give ${1:cVariableName}",
+            "kind": "function",
+            "annotation": "Get input from standard input"
         },
         {
             "trigger": "globals",

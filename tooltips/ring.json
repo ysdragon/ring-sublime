@@ -221,6 +221,12 @@
         "example": "callgarbagecollector()",
         "class": ["function"]
     },
+    "call": {
+        "syntax": "call variable([parameters])",
+        "description": "Call a function from a variable",
+        "example": "func main\n\tsee \"before test2()\" + nl\n\tf = test2(:test)\n\tsee \"after test2()\" + nl\n\tcall f()\nfunc test\n\tsee \"message from test!\" + nl\nfunc test2 f1\n\tcall f1()\n\tsee \"message from test2!\" + nl\n\treturn f1",
+        "class": ["function"]
+    },
     "callgc": {
         "syntax": "callgc()",
         "description": "Call garbage collector",
@@ -575,10 +581,22 @@
         "example": "see getptr(myPointer)",
         "class": ["function"]
     },
+    "get": {
+        "syntax": "get cVariableName",
+        "description": "Get input from standard input",
+        "example": "see \"What is your name? \"\nget cName\nsee \"Hello \" + cName",
+        "class": ["function"]
+    },
     "getstring": {
         "syntax": "getstring()",
         "description": "Get string from standard input",
-        "example": "see getstring()",
+        "example": "print(\"What is your name? \")\ncName = getstring()\nprint(\"Hello #{cName}\")",
+        "class": ["function"]
+    },
+    "give": {
+        "syntax": "give cVariableName",
+        "description": "Get input from standard input",
+        "example": "see \"What is your name? \"\ngive cName\nsee \"Hello \" + cName",
         "class": ["function"]
     },
     "globals": {
