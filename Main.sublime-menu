@@ -61,7 +61,7 @@
                                 "command": "edit_settings",
                                 "caption": "Settings",
                                 "args": {
-                                    "base_file": "${packages}/ring-sublime/settings/ring.sublime-settings"
+                                    "base_file": "${packages}/Ring/settings/ring.sublime-settings"
                                 }
                             },
                             {

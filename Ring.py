@@ -44,7 +44,7 @@ def plugin_loaded():
             Pref.show_tooltips = settings.get("show_tooltips", True)
             
     Pref = Pref()
-    settings = sublime.load_settings("Ring.sublime-settings")
+    settings = sublime.load_settings("ring.sublime-settings")
         
     # Load tooltip data from json
     tooltips = sublime.load_resource("Packages/Ring/tooltips/ring.json")
@@ -200,5 +200,5 @@ class RingOpenGroupCommand(sublime_plugin.ApplicationCommand):
 class RingOpenSettingsCommand(sublime_plugin.ApplicationCommand):
     def run(self):
         sublime.run_command("open_file", {
-            "file": "${packages}/ring-sublime/ring.sublime-settings"
+            "file": "${packages}/Ring/ring.sublime-settings"
         })
