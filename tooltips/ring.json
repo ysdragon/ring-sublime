@@ -134,7 +134,7 @@
     "add": {
         "syntax": "add(List, Item)",
         "description": "Add item to list",
-        "example": "list = [1,2,3]\nadd(list, 4)\nsee list  # Prints [1,2,3,4]",
+        "example": "list = [1,2,3]\nadd(list, 4)\nsee list\n\n/* Output:\n1\n2\n3\n4\n*/",
         "class": ["function"]
     },
     "addattribute": {
