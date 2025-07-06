@@ -1,0 +1,11 @@
+Ring Language Support for Sublime Text - Version v1.2.0
+================================
+
+- Added the missing `dependencies.json` file to the package, which is required for proper functionality.
+- Revised and improved completions and tooltips for better user experience.
+- Added new completions and tooltips for `call`, `get`, `give`, `exit`, `loop`, and `bye`.
+- Enhanced syntax highlighting with updated keywords and command context.
+- Improved case-insensitive lookup for words.
+- Added a new tooltip for `cCatchError`.
+- Updated examples and classifications for better clarity.
+- Supported highlighting of anonymous functions within function parameters.
