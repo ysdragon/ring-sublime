@@ -11,10 +11,9 @@ This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Subl
 
 ## Screenshots
 
-![Tooltips](img/tooltips.gif)
-![Ring Syntax Highlighting Example 1](img/1.png)
-![Ring Syntax Highlighting Example 2](img/2.png)
-![Ring Syntax Highlighting Example 3](img/3.png)
+<img src="img/tooltips.gif" alt="Tooltips">
+<img src="img/1.png" alt="Ring Syntax Highlighting Example 1" width="600" height="400">
+<img src="img/2.png" alt="Ring Syntax Highlighting Example 2" width="600" height="400">
 
 ## Installation
 
