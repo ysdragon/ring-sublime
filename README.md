@@ -1,19 +1,22 @@
-## Sublime Text Support for the [Ring](https://ring-lang.net/) Programming Language
+# Sublime Text Support for the Ring Programming Language
 
 This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Sublime Text.
 
 ## Features
 
-- **Syntax Highlighting**: Complete support for Ring keywords, comments, strings, numbers, and operators
-- **Interactive Tooltips**: Hover over Ring functions to see documentation, syntax, and examples
-- **Code Completion**: Intelligent keyword and function completions
-- **Build System Integration**: Run Ring files directly from Sublime Text (Ctrl+B/Cmd+B)
-- **Menu Integration**: Access Ring tools via Tools > Ring menu
-- **Settings Management**: Easy access to plugin settings via Preferences menu
+-   **Syntax Highlighting**: Complete support for Ring keywords, functions, strings, numbers, and operators.
+-   **Code Completion**: Suggestions for keywords and functions.
+-   **Interactive Tooltips**: Hover over any function to get instant documentation, including syntax and code examples.
+-   **Build System Integration**: Run your Ring scripts (`.ring` files) directly from Sublime Text using the built-in build system (`Ctrl+B`).
+
+## Screenshots
+
+![Tooltips](img/tooltips.gif)
+![Ring Syntax Highlighting Example 1](img/1.png)
+![Ring Syntax Highlighting Example 2](img/2.png)
+![Ring Syntax Highlighting Example 3](img/3.png)
 
 ## Installation
-
-### Using Package Control
 
 1. Open the Command Palette in Sublime Text by pressing `Ctrl+Shift+P` (Windows/Linux) or `Cmd+Shift+P` (macOS).
 2. Type `Package Control: Install Package` and select from the dropdown list.
@@ -21,23 +24,18 @@ This bundle provides [Ring](https://ring-lang.net/) syntax highlighting for Subl
 
 ## Usage
 
-Once installed, Sublime Text should automatically detect `.ring`, `.rform` and `.rh` files and apply the syntax highlighting. If it does not, you can manually set the syntax by:
+After installation, the plugin automatically handles `.ring`, `.rform`, and `.rh` files.
 
-1. Opening a `.ring` file.
-2. Going to `View` > `Syntax` > `Open all with current extension as...` > `Ring`.
+### Syntax Highlighting
 
-### Interactive Features
+If syntax highlighting is not applied automatically, you can set it manually:
+1.  Open a `.ring` file.
+2.  Go to `View > Syntax > Ring`.
 
-- **Tooltips**: Hover over Ring functions and keywords to see interactive documentation with examples
-- **Menu Access**: Use `Tools > Ring` to access plugin features like running files, toggling tooltips, and opening Ring resources
-- **Settings**: Configure the plugin via `Preferences > Package Settings > Ring`
-- **Quick Build**: Press `Ctrl+B` (Windows/Linux) or `Cmd+B` (macOS) to run Ring files directly
+## Contributing
 
-## Screenshots
-
-![Ring Syntax Highlighting Example 1](img/1.png)
-![Ring Syntax Highlighting Example 2](img/2.png)
-![Ring Syntax Highlighting Example 3](img/3.png)
+Contributions are welcome! If you find a bug or have a feature request, please open an issue on the [GitHub repository](https://github.com/ysdragon/ring-sublime/issues). If you want to contribute code, please fork the repository and submit a pull request.
 
 ## License
-This project is open-source and available under the MIT License. See the [LICENSE](https://github.com/ysdragon/ring-sublime/blob/master/LICENSE) file for more details.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
