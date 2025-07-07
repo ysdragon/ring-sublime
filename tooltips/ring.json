@@ -1034,7 +1034,7 @@
     "optionalfunc": {
         "syntax": "optionalfunc(cFuncName)",
         "description": "Define optional function",
-        "example": "optionalfunc(\"myOptionalFunc\")",
+        "example": "optionalfunc(\"myOptionalFunc\")\n# or\noptionalfunc(:myOptionalFunc)",
         "class": ["function"]
     },
     "packageclasses": {
