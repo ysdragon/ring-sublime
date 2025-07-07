@@ -219,7 +219,7 @@
         "syntax": "cCatchError",
         "description": "Catch error in try-catch block",
         "example": "try\n\tx = 1 / 0\ncatch\n\tsee \"Catching error: \" + cCatchError + nl\nend",
-        "class": ["command"]
+        "class": ["variable"]
     },
     "callgarbagecollector": {
         "syntax": "callgarbagecollector()",
