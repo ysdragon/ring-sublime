@@ -10,7 +10,8 @@ SCOPES = [
     "support.function.builtin.ring",
     "keyword.control.ring",
     "keyword.control.conditional.ring",
-    "storage.type.ring"
+    "storage.type.ring",
+    "constant.language.ring"
 ]
 
 def lang_map_settings():
