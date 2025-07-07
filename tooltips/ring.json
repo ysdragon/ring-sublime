@@ -1199,6 +1199,12 @@
         "example": "see right(\"Hello\", 2)  # Returns \"lo\"",
         "class": ["function"]
     },
+    "RingOptionalFunctions": {
+        "syntax": "RingOptionalFunctions",
+        "description": "A list contains optional functions names",
+        "example": "? \"Declare optional functions\"\noptionalFunc(\"one\")\noptionalFunc(\"two\")\noptionalFunc(\"three\")\n? \"Call optional functions\"\none() two() three()\n? \"Print list of optional functions\"\n? RingOptionalFunctions # The new optional function name will be added to the RingOptionalFunctions list.\n? \"Define optional functions\"\neval(`\nfunc one   ? \"Message from one() function\"\nfunc two   ? \"Message from two() function\"\nfunc three ? \"Message from three() function\"\n`)\n? \"Call optional functions\"\none() two() three()",
+        "class": ["list"]
+    },
     "ring_give": {
         "syntax": "ring_give(cVariable)",
         "description": "Get variable value",
