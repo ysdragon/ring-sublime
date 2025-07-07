@@ -14,9 +14,10 @@ file_extensions:
 
 variables:
   keywords: '\b(?i:(class|from|get|give|import|load|new|package|private|endclass|endpackage|nl|see|put|call))\b'
-  commands: '\b(?i:(enablehashcomments|disablehashcomments|changeringkeyword|changeringoperator|loadsyntax|ccatcherror))\b'
+  commands: '\b(?i:(enablehashcomments|disablehashcomments|changeringkeyword|changeringoperator|loadsyntax))\b'
   controls: '\b(?i:(if|but|else|elseif|ok|for|foreach|to|next|catch|step|endfor|while|other|end|do|endif|endwhile|endswitch|endtry|try|break|bye|continue|default|endfunc|endfunction|return|switch|case|on|off|do|again|exit|loop|done|in))\b'
   operators: '(\+|~|-|\*|/|%|&|(\|)|^|!|<|>|=|\.)'
+  
 contexts:
   main:
     - include: comments
@@ -232,5 +233,5 @@ contexts:
         - include: main
 
   special-values:
-    - match: '\b(?i:(true|false|null))\b'
+    - match: '\b(?i:(true|false|null|ccatcherror|ringoptionalfunctions))\b'
       scope: constant.language.ring
