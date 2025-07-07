@@ -1,0 +1,6 @@
+Ring Language Support for Sublime Text - Version v1.3.0
+================================
+
+- Revised the `cCatchError` class type.
+- Improved the tooltip example for `optionalfunc`.
+- Added a tooltip for the `RingOptionalFunctions` list.
